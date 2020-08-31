@@ -215,6 +215,9 @@ echo -e   borrar el '# en el siguiente enunciado es_ES.UTF-8 UTF-8'
 echo
 echo -e   Escrive:$  "\e[1;33m  nano /mnt/etc/locale.gen \e[0m"
 echo
+echo      Guardar el archivo (Ctrl+o)
+echo      Para salir (Ctrl+x)
+echo
 echo -e "\e[36m===================================================\e[0m"
 bash
 clear
