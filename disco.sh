@@ -21,9 +21,9 @@ echo
 echo -e "   \e[1;34m Pasos a seguir: \e[0m"
 echo "
         1-	Identificamos el disco y lo anotamos
-        2-	Lo formateamos a “ms2” para poder utilizarlo
+        2-	Lo formateamos a ms2 para poder utilizarlo
         3-	Creamos la partición boot y la activamos
-        4-	Creamos la partición del sistema “/”
+        4-	Creamos la partición del sistema /
         5-	Creamos la partición swap
 "
 echo -e "\e[36m===================================================\e[0m"
@@ -89,8 +89,8 @@ echo "
 Copiamos el resultado y lo pegamos en el bash$
 Tanto el "metodo 1" como el "metodo 2" son iguales de factibles:
 "
-echo -e Metodo 1:$  "\e[1;33m (echo n; echo p; echo 2; echo  ; echo +27,5G; echo w;) | fdisk /dev/$disco \e[0m"
-echo -E Metodo 2:'$  echo- e "n\np\n2\n\n+27,5G\n w" |fdisk /dev/'$disco
+echo -e Metodo 1:$  "\e[1;33m (echo n; echo p; echo 2; echo  ; echo +27.5G; echo w;) | fdisk /dev/$disco \e[0m"
+echo -E Metodo 2:'$  echo- e "n\np\n2\n\n+27.5G\n w" |fdisk /dev/'$disco
 bash
 #CREAMOS LA PARTICION SWAP
 clear
