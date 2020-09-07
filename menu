@@ -1,0 +1,17 @@
+echo -e "
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                     \e[32mConfigurando el sistema ArchLinux\e[0m                        │
+│                                                                              │
+│ Selecciona la opción a ejecutar para configurar el sistema.                  │
+│ Opciones:                                                                    │
+│                                                                              │
+│       1.) inicio root             - inicio                                   │
+│       2.) Anarchy Update          - anarchy -u                               │
+│       3.) Update Arch Linux Keys  - anarchy -k                               │
+│       4.) Connection Test         - iptest                                   │
+│       5.) System Information      - sysinfo                                  │
+│                                                                              │
+│ For more information on Anarchy type: 'anarchy --help'                       │
+│ Par volver al menu principal escriba: 'start'                                │
+└──────────────────────────────────────────────────────────────────────────────┘
+"
