@@ -82,8 +82,6 @@ echo      Si no savemos el que tenemos los buscamos con:
 echo
 echo -e   Escrive:$  "\e[1;33m lspci | grep VGA \e[0m" y anotamos.
 echo
-echo -e "Nota:Los Draivers propietarios los instalremos desde \e[32m Repositorio AUR \e[0m" cuando entremos como usuario.
-echo
 echo -e "\e[36m===================================================\e[0m"
 bash
 clear
@@ -92,8 +90,9 @@ echo -e "\e[36m===================================================\e[0m"
 echo      Para tarjeta grafica AMD ponemos:
 echo -e   Escrive:$  "\e[1;33m pacman -S xf86-video-amdgpu amd-ucode \e[0m"
 echo
-echo      Para tarjeta grafica NVIDIA ponemos:
-echo -e   Escrive:$  "\e[1;33m pacman -S xf86-video-nouveau \e[0m"
+echo -e   Para tarjeta grafica NVIDIA ponemos: "\e[1;35m solo uno \e[0m"
+echo -e   Escrive:$  "\e[1;33m pacman -S xf86-video-nouveau \e[0m" ---libre
+echo -e   Escrive:$  "\e[1;31m pacman -S nvidia nvidia-settings \e[0m" ---propietario 
 echo
 echo      Para tarjeta grafica ATI   
 echo -e   Escrive:$  "\e[1;33m pacman -S xf86-video-ati \e[0m"
@@ -101,9 +100,8 @@ echo
 echo -e   Para tarjeta grafica INTEL
 echo -e   Escrive:$  "\e[1;33m pacman -S xf86-video-intel intel-ucode \e[0m"
 echo
-echo -e   Si utilizamos una MV "virtualbox"
-echo -e   Escrive:$  "\e[1;33m pacman -S virtualbox-guest-utils \e[0m"
-echo -e   Escrive:$  "\e[1;33m pacman -S xf86-video-wmware \e[0m"
+echo -e   Si utilizamos una MV "virtualbox" "\e[1;35m los dos \e[0m"
+echo -e   Escrive:$  "\e[1;33m pacman -S virtualbox-guest-utils xf86-video-wmware \e[0m"
 echo
 echo -e "\e[36m===================================================\e[0m"
 bash

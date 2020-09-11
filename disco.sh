@@ -5,6 +5,7 @@
 #PARTICIONAR DISCO CON FDISK
 clear
 echo -e "\e[36m===================================================\e[0m"
+echo
 echo -e "   \e[1;34m PARTICIONAR DISCO CON FDISK: \e[0m"
 echo -e "
 Vamos a particionar el disco de nuestra máquina,
@@ -107,5 +108,5 @@ Tanto el "metodo 1" como el "metodo 2" son iguales de factibles:
 echo -e Metodo 1:$  "\e[1;33m (echo n; echo p; echo 3; echo  ; echo  ; echo t; echo 3; echo 82; echo w;) | fdisk /dev/$disco \e[0m"
 echo -E Metodo 2:'$  echo -e "n\np\n3\n\n\n t\n3\n82\n w" | fdisk /dev/'$disco
 bash
-read -p "Press enter para continuar la instalacion" 
+read -p "Press enter para continuar la instalacion + exit" 
 exit

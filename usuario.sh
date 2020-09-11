@@ -140,15 +140,15 @@ echo
 echo -e  " \e[35m
         Con esto terminamos la instalacion de Arch Linux
         \e[0m "
-sleep 1s
+sleep 2s
 echo -e   " \e[35m
         Y la configuracion del escritorio basica
         \e[0m "
-sleep 1s
+sleep 2s
 echo -e   " \e[35m
         Espero que hayais tenido una buena experienccia
         \e[0m "
-sleep 1s
+sleep 2s
 echo -e   " \e[35m
         Y saludos a todos..............
         \e[0m "
@@ -158,4 +158,13 @@ echo -e "\e[36m===================================================\e[0m"
 echo -e "\e[36m===================================================\e[33m"
 echo
 read -p "       Press enter para reiniciar el sistema "
+# BYE
+echo -e "\n\nBBBBBB  YY    YY EEEEEEE"
+ echo        "BB  BBB  YY YY   EE     "
+ echo        "BB  BBB   YYY    EE     "
+ echo        "BBBBBB    YYY    EEEEEE "
+ echo        "BB  BBB   YYY    EE     "
+ echo        "BB  BBB   YYY    EE     "
+ echo -e     "BBBBBB    YYY    EEEEEEE\n\n"
+ sleep 2s
 reboot

@@ -1,58 +1,96 @@
 # Manual para instalar Arch Linux
 
-Este script ara más fácil la instalación de Arch Linux
-Con él se pueden ver los comandos que necesitas para la instalación y vosotros mismos los iréis poniendo.
+Este script ara más fácil la instalación de **Arch Linux**
+Con él se pueden ver los `comandos` que necesitas para la instalación y vosotros mismos los iréis poniendo.
 De esta manera iréis aprendiendo más fácil.
 Podéis cambiar los comandos, por otros que vosotros utilicéis.
+Al finalizar un `comando` ay que poner **exit** para continuar.
 
 ## Guía de utilización
 
 Nos descargamos la ISO desde la página oficial https://www.archlinux.org/download/
+O directamente desde aquí: http://ftp.rediris.es/mirror/archlinux/iso/2020.09.01/archlinux-2020.09.01-x86_64.iso
 
-O directamente desde aquí http://ftp.rediris.es/mirror/archlinux/iso/2020.08.01/archlinux-2020.08.01-x86_64.iso
+Cargamos la iso en nuestro PC o M. Virtual, una vez iniciado el sistema nos descargamos el git del repositorio:
+**empecemos!**
 
-Cargamos la iso en nuestro PC o M. Virtual, una vez iniciado el sistema nos descargamos el git
+### Preparar el sistema para lanzar el script
 
----
+Para empezar ponemos el teclado en español:
 
-\$ pacman -Sy git
+```sh
+$ loadkeys es
+```
 
-\$ git clone https://github.com/SinLuX90/arch.git
+Actualizamos y descargamos git:
 
-Nos encontramos con cuatro scripts a utilizar en este orden
+```sh
+$ pacman -Sy git
+```
 
-1º install.sh -> Es un script de instalación Arch Linux SO
+Terminado nos bajamos el repositorio de este enlace:
 
-2º disco.sh -> Configuración del disco y particiones
-
-3º kernel.sh -> Instalación del Kernel Linux y Sistema Base
-
-4º usuario.sh -> Configuración de Grafica y programas
-
-\$ cd install_arch_script
+```sh
+$ git clone https://github.com/SinLuX90/arch.git
+```
 
 ### Lanzamos el script
 
-\$ ./install.sh
+Terminada la descarga entramos en el directorio y ejecutamos el script.
+
+```sh
+$ cd arch
+$ ls 				⇒ nos muestra los archivos
+install.sh disco.sh kernel.sh root.sh usuario.sh README.md  ......
+```
+
+Nos encontramos con cinco scripts a utilizar en este orden
+
+> 1º install.sh -> Es un script de instalación **Arch Linux**. Dentro se utilizan el script de configuración del disco e instal·lació del sistema base y **kernel linux**
+>
+> - Aº disco.sh -> Configuración del disco y particiones
+> - Bº kernel.sh -> Instalación del Sistema Base y Kernel Linux
+>
+> 2º root.sh -> Configuración de Red y controladores gráficos.
+> 3º usuario.sh -> Configuración de usuario y Escritorio gráfico.
+
+#### Nota
+
+Dentro de la instalación, al poner el segundo script el de disco.sh hay que poner dos veces **exit** para volver al script principal.
+
+> El primer **exit** sale del script disco.sh
+> El segundo **exit** continua el primer script
+>
+> Paso lo mismo al lanzar el script de kernel.sh
+
+Lanzamos el el script
+
+```sh
+$ ./install.sh
+```
 
 ---
 
-El script se utiliza muy fácil;
+El script se utiliza muy fácil:
 
 El color amarillo que veis indica el comando a introducir en el bash:
+Una vez introducido + Enter para ejecutar
 
-Una vez introducido + Enter para ejecutar -> Se realiza el comando
+```sh
+$ Se realiza el comando
+```
 
-En la próxima línea del bash tenéis que poner exit
+En la próxima línea del `bash$` tenéis que poner **exit**
 
-bash~\$ exit -> para continuar con el script
+```sh
+$ exit 			-> para continuar con el script
+```
 
-Cuando configuremos el disco e instalemos el kernel de linux, lanzaremos el orto script dentro del primero.
+Recordar, cuando configuremos el disco e instalemos el kernel de linux, lanzaremos el orto script dentro del primero.
+Para salir de estos script hay que poner dos veces **exit**.
 
-Para salir de estos script hay que poner dos veces exit.
-
-Así hasta el final, ya veréis que en poco tiempo tenis Arch Linux instalado.
+Así hasta el final, ya veréis que en poco tiempo tenis **Arch Linux** instalado.
 
 No os dará tiempo para tomar :coffee:
 
-Próximamente añadiré un video de la instalación.
+Cualquier duda podeis mandar un correo: sinlux90@gmail.com

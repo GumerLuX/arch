@@ -18,6 +18,8 @@ echo -e   Recuerda escribe "\e[1;33m exit \e[0m" para continuar el script
 echo
 echo -e "\e[36m===================================================\e[0m"
 echo
+bash
+clear
 # TECLADO
 echo -e "\e[36m===================================================\e[0m"
 echo
@@ -51,16 +53,6 @@ echo
 echo -e "\e[36m===================================================\e[0m"
 bash
 clear
-# LOCALIZAR DISCO
-#    echo -e "\e[36m===================================================\e[0m"
-#    echo
-#    echo    Localizamos el disco para crear particiones
-#    echo
-#    echo -e   Escrive:$  "\e[1;33m fdisk -l \e[0m" podemos poner '| more' si teneis muchos discos
-#    echo
-#    echo -e "\e[36m===================================================\e[0m"
-#    bash
-#    clear
 # EDITAR DISCO LANZAR SCRIPT
 echo -e "\e[36m===================================================\e[0m"
 echo
@@ -73,7 +65,7 @@ echo -e   .     "3º  particion     swap    2G          -Particion de memoria in
 echo
 echo -e  Lanzamos el script: "\e[1;33m disco2.sh \e[0m" para editarlo.
 echo
-echo -e  Escrive:$  "\e[1;33m sh disco2.sh o ./disco.sh\e[0m" 	
+echo -e  Escrive:$  "\e[1;33m sh disco.sh o ./disco.sh\e[0m" 	
 echo
 echo -e "\e[36m===================================================\e[0m"
 bash
@@ -110,14 +102,6 @@ echo
 echo -e "\e[36m===================================================\e[0m"
 bash
 clear
-# FORMATEAR PARTICION HOME
-#echo -e "\e[36m===================================================\e[0m"
-#echo    Formateamos la particion home
-#echo
-#echo -e   Escrive:$  "\e[1;33m mkfs.ext4 /dev/sda4 \e[0m"
-#echo -e "\e[36m===================================================\e[0m"
-#bash
-#clear
 # FORMATEAR PARTICION SWAP Y MONTAMOS
 echo -e "\e[36m===================================================\e[0m"
 echo
@@ -161,7 +145,6 @@ echo    Instalando el Kernel Linux y Sistema Base
 echo
 echo    Llamamos al script de instalacion del Kernel:
 echo -e   Escrive:$  "\e[1;33m ./kernel.sh \e[0m"
-#echo -e   Escrive:$  "\e[1;33m pacstrap /mnt base base-devel grub os-prober ntfs-3g networkmanager gvfs gvfs-afc gvfs-mtp xdg-user-dirs linux linux-firmware nano dhcpcd \e[0m"
 echo
 echo -e "\e[36m===================================================\e[0m"
 bash
@@ -215,8 +198,8 @@ echo -e   borrar el '# en el siguiente enunciado es_ES.UTF-8 UTF-8'
 echo
 echo -e   Escrive:$  "\e[1;33m  nano /mnt/etc/locale.gen \e[0m"
 echo
-echo      Guardar el archivo (Ctrl+o)
-echo      Para salir (Ctrl+x)
+echo  -e  "  Guardar el archivo (Ctrl+o)"
+echo  -e  "  Para salir (Ctrl+x)"
 echo
 echo -e "\e[36m===================================================\e[0m"
 bash
@@ -277,18 +260,6 @@ echo
 echo -e "\e[36m===================================================\e[0m"
 bash
 clear
-# Os prover
-#echo -e "\e[36m===================================================\e[0m"
-#echo    Configurando el sistema: Os prober "si no detecta el sistema"
-#echo    O teneis mas de un sistema y no os a salido#echo
-#echo
-#echo -e   Escrive:$  "\e[1;33m os-prober \e[0m" y repetimos el comando de la creacion grub.cfg
-#echo -e   Escrive:$  "\e[1;33m arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg \e[0m"
-#echo
-#echo -e "\e[36m===================================================\e[0m"
-#bash
-#clear
-
 # Establecer contraseña del Administrador (root)
 echo -e "\e[36m===================================================\e[0m"
 echo
@@ -323,15 +294,15 @@ echo -e "\e[36m===================================================\e[0m"
 bash
 clear
 # Copiar el script de instalacion
-#echo -e "\e[36m===================================================\e[0m"
-#echo   Copiamos el script de instalacion
-#echo
-#echo -e   Escrive:$  "\e[1;33m cd .. \e[0m"
-#echo -e   Escrive:$  "\e[1;33m cp -r install_Arch_script /mnt/root \e[0m"
-#echo
-#echo -e "\e[36m===================================================\e[0m"
-#bash
-#clear
+echo -e "\e[36m===================================================\e[0m"
+echo   Copiamos el script de instalacion
+echo
+echo -e   Escrive:$  "\e[1;33m cd .. \e[0m"
+echo -e   Escrive:$  "\e[1;33m cp -r Arch /mnt/root \e[0m"
+echo
+echo -e "\e[36m===================================================\e[0m"
+bash
+clear
 # Dosmontar particiones y reinicio de sistema
 echo -e "\e[36m===================================================\e[0m"
 echo
