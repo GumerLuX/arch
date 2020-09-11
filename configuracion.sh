@@ -31,4 +31,5 @@ alias 4='iptest'
 alias 5='sysinfo'
 clear
 cat nemu
-
+# Discover activar el gestor depaquetes de plasma
+echo -e   Escrive:$  "\e[1;33m pacman -S packagekit-gt5 \e[0m"

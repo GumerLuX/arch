@@ -1,0 +1,26 @@
+echo -e "\e[36m===================================================\e[0m"
+echo
+echo -e "\e[32m Instalamos el escritorio xfce: \e[0m"
+echo
+echo -e   Escribe:$  "\e[1;33m sudo pacman -S xfce4 xfce4-goodies network-manager-applet \e[0m"
+bash
+clear
+echo -e "\e[36m===================================================\e[0m"
+echo
+echo -e "\e[32m Instalamos el gestores de pantalla DM: \e[0m"
+echo
+echo -e   Escribe:$  "\e[1;33m sudo pacman -S lightdm-gtk-greeter \e[0m"
+bash
+clear
+echo -e "\e[36m===================================================\e[0m"
+echo
+echo -e "\e[32m y lo activamos asi: \e[0m"
+echo
+echo -e   Escribe:$  "\e[1;33m systemctl enable lightdm.service \e[0m"
+bash
+clear
+echo -e "\e[36m===================================================\e[0m"
+echo
+read -p "Presiona enter para continuar la instalación" 
+exit
+echo -e "\e[36m===================================================\e[0m"

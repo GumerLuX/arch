@@ -1,0 +1,38 @@
+1) "Instalmos el escritorio xfce "
+
+pacman -S xfce4 xfce4-goodies network-manager-applet
+
+    # Y instalamos y activamos el DM
+
+    sudo pacman -S lightdm-gtk-greeter
+    systemctl enable lightdm.service
+
+2) "Instalmos el escritorio gnome "
+
+pacman -S gnome gnome-extra gnome-tweak-tool
+
+    #Y instalamos y activamos el DM
+
+    sudo pacman -S gdm
+    systemctl enable gdm.service
+
+3) "Instalmos el escritorio Plasma Kde "
+
+sudo pacman -S palsma kde-aplications
+
+    #Y activamos el DM
+
+    systemctl enable sddm.service
+
+4) "Instalmos el escritorio cinnamon "
+
+sudo pacman -S cinnamon
+
+    #Y instalamos y activamos el DM
+
+    sudo pacman -S lightdm-gtk-greeter
+    systemctl enable lightdm.service
+
+
+
+
