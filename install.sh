@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #version: 0.0
-# https://github.com/SinLuX90/Arch.git
+# https://github.com/SinLuX90/arch.git
 # 1 INTRO
 clear
 echo -e "\e[36m===================================================\e[0m"
@@ -298,7 +298,7 @@ echo -e "\e[36m===================================================\e[0m"
 echo   Copiamos el script de instalacion
 echo
 echo -e   Escrive:$  "\e[1;33m cd .. \e[0m"
-echo -e   Escrive:$  "\e[1;33m cp -r Arch /mnt/root \e[0m"
+echo -e   Escrive:$  "\e[1;33m cp -r arch /mnt/root /mnt/home/ \e[0m"
 echo
 echo -e "\e[36m===================================================\e[0m"
 bash

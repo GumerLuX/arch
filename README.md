@@ -54,19 +54,30 @@ Nos encontramos con cinco scripts a utilizar en este orden
 > 2º root.sh -> Configuración de Red y controladores gráficos.
 > 3º usuario.sh -> Configuración de usuario y Escritorio gráfico.
 
-#### Nota
+### Nota
 
 Dentro de la instalación, al poner el segundo script el de disco.sh hay que poner dos veces **exit** para volver al script principal.
-
 > El primer **exit** sale del script disco.sh
 > El segundo **exit** continua el primer script
 >
 > Paso lo mismo al lanzar el script de kernel.sh
 
 Lanzamos el el script
-
 ```sh
 $ ./install.sh
+```
+Terminado el primer script, reiniciamos y entramos como root
+y lanzamos el segundo script
+```sh
+$ ls				-> Comprobamos el directorio
+$ cd arch			-> Entramos en el, y lanzamos el script
+$ ./root.sh
+```
+Al finalizar entramos como usuario y lanzamos el tercer script
+```sh
+$ ls				-> Comprobamos el directorio
+$ cd arch			-> Entramos en el, y lanzamos el script
+$ ./usuario.sh
 ```
 
 ---
@@ -93,4 +104,4 @@ Así hasta el final, ya veréis que en poco tiempo tenis **Arch Linux** instalad
 
 No os dará tiempo para tomar :coffee:
 
-Cualquier duda podeis mandar un correo: sinlux90@gmail.com
+Cualquier duda podéis mandar un correo: sinlux90@gmail.com

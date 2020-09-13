@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #version: 0.0
-# https://github.com/SinLuX90/Arch.git
+# https://github.com/SinLuX90/arch.git
 # 1r INICIO ROOT
 # Preparar root, usuario sudo codecs y xorg
 clear
@@ -69,7 +69,6 @@ echo
 echo -e "\e[32m Instalamos servidor grafico mesa y la Grafica \e[0m"
 echo
 echo -e   Escrive:$  "\e[1;33m pacman -S xorg-server xorg-xinit xorg xorg-apps mesa mesa-demos \e[0m"
-                               pacman -S xorg-server xorg-xinit xorg-server-utils
 echo
 echo -e "\e[36m===================================================\e[0m"
 bash
@@ -78,6 +77,7 @@ clear
 echo -e "\e[36m===================================================\e[0m"
 echo
 echo -e "\e[32m Instalamos el controlador de video \e[0m"
+echo
 echo      Si no savemos el que tenemos los buscamos con:
 echo
 echo -e   Escrive:$  "\e[1;33m lspci | grep VGA \e[0m" y anotamos.
@@ -87,6 +87,7 @@ bash
 clear
 # Instalamos los Controladores de video
 echo -e "\e[36m===================================================\e[0m"
+echo
 echo      Para tarjeta grafica AMD ponemos:
 echo -e   Escrive:$  "\e[1;33m pacman -S xf86-video-amdgpu amd-ucode \e[0m"
 echo
@@ -120,11 +121,31 @@ echo -e "\e[36m===================================================\e[0m"
 bash
 clear
 echo -e "\e[36m===================================================\e[0m"
+echo   Copiamos el script de instalacion al directorio de usuario
+#cremos la variable $usuario
+echo
+echo "Pon el nombre de tu usuario:"
+echo
+read usuario
+echo
+echo -e   Escrive:$  "\e[1;33m cd .. \e[0m"
+echo -e   Escrive:$  "\e[1;33m cp -r arch /home/$usuario \e[0m"
+echo
+echo -e "\e[36m===================================================\e[0m"
+bash
+clear
+echo -e "\e[36m===================================================\e[0m"
 echo
 echo -e "\e[32m Ahora entraremos como usuario. \e[0m"
 echo   "
-Salimos de root con exit
-"
+        Al entrar como ususrio abre el directorio del script y lo lanzas
+        
+        $ ls				-> Comprovamos el directorio
+        $ cd arch			-> Entramos en el, y lanzamos el script
+        $ ./usuario.sh
+
+        Salimos de root con exit
+       "
 echo -e "\e[36m===================================================\e[0m"
 echo
 read -p "Press enter para salir del script" 

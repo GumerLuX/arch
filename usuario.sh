@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #version: 0.0
-# https://github.com/SinLuX90/Arch.git
+# https://github.com/SinLuX90/arch.git
 # 1r INICIO USUARIO
 # Preparar root, usuario sudo codecs y xorg
 clear
@@ -18,13 +18,13 @@ echo -e   3- Elegimos los mirrors mas rapidos de ArchLinux
 echo -e   4- Instalacion de AURHelper y configurar color.
 echo -e   5- Instalando el entorno grafico "'escritorio'"
 echo
-# Habilitar Network Manager
+# Habilitar Network Manager y actualizamos git
 echo -e "\e[36m===================================================\e[0m"
 echo
-echo -e "\e[32m Havilitamos el NetworkManager: \e[0m"
+echo -e "\e[32m Havilitamos el NetworkManager y actualizamos git: \e[0m"
 echo
 echo -e   Escrive:$  "\e[1;33m systemctl enable NetworkManager.service \e[0m"
-echo -e   Escrive:$  "\e[1;33m sudo pacman -Syyu \e[0m"
+echo -e   Escrive:$  "\e[1;33m sudo pacman -Syyu git \e[0m"
 echo	  
 echo -e "\e[36m===================================================\e[0m"
 bash
@@ -39,7 +39,7 @@ echo    "
         Este comando nos crea en la carpeta X11/xorg.conf un archivo de configuracion de nuestro teclado "00-keyboard.conf"
         Podemos comprovarlo abiendolo con cat.
         "
-echo -e   Escrive:$  "\e[1;33m cat etc/X11/xorg.conf.d/00-keyboard.conf \e[0m"
+echo -e   Escrive:$  "\e[1;33m cat /etc/X11/xorg.conf.d/00-keyboard.conf \e[0m"
 echo
 echo -e "\e[36m===================================================\e[0m"
 bash

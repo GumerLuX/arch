@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #version: 0.0
-# https://github.com/SinLuX90/Arch.git
+# https://github.com/SinLuX90/arch.git
 #PARTICIONAR DISCO CON FDISK
 clear
 echo -e "\e[36m===================================================\e[0m"

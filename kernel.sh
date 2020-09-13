@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #version: 0.0
-# https://github.com/SinLuX90/Arch.git
+# https://github.com/SinLuX90/arch.git
 #INSTALACION DEL KERNEL LINUX Y SISTEMA BASE
 # instalacion del Kernel Linux
 # Kernel  Ofiacialmente compatibles
