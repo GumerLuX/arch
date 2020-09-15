@@ -2,8 +2,29 @@ echo -e "\e[36m===================================================\e[0m"
 echo
 echo -e "\e[32m Instalamos el escritorio Plasma KDE: \e[0m"
 echo
-echo -e   Escribe:$  "\e[1;33m sudo pacman -S palsma kde-aplications \e[0m"
+echo -e   Escribe:$  "\e[1;33m sudo pacman -S plasma kde-applications
+          \e[1;30m 
+          Con estos comandos tenemos una instalación completa.
+          Si queréis una instalación mas mínima podéis instalar estos paquetes:
+          \e[1;33m 
+          plasma-desktop
+          plasma-meta
+          \e[0m"
+echo -e "\e[36m===================================================\e[0m"
+bash
+clear
+echo -e "\e[36m===================================================\e[0m"
 echo
+echo -e   Si habéis hecho una instalación mínima, podéis instalar estas utilidades:" 
+          Utilidades a instalar:
+          Escribe:$ \e[1;33m sudo pacman -S
+          \e[1;33m        
+          plasma-wayland-session    -> Nuevo inicio de sesión plasma
+          ffmpegthumbs              -> para tener miniaturas
+          discover                  -> Gestor de descargas kde  
+          packagekit-qt5   -        -> Habilitar el discover
+          \e[0m"
+echo -e "\e[36m===================================================\e[0m"
 bash
 clear
 echo -e "\e[36m===================================================\e[0m"

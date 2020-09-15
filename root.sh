@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#version: 0.0
+#version: 0.1
 # https://github.com/SinLuX90/arch.git
 # 1r INICIO ROOT
 # Preparar root, usuario sudo codecs y xorg
@@ -68,7 +68,11 @@ echo -e "\e[36m===================================================\e[0m"
 echo
 echo -e "\e[32m Instalamos servidor grafico mesa y la Grafica \e[0m"
 echo
-echo -e   Escrive:$  "\e[1;33m pacman -S xorg-server xorg-xinit xorg xorg-apps mesa mesa-demos \e[0m"
+echo -e   Escrive:$ "\e[1;33m pacman -S xorg xorg-xinit mesa mesa-demos  nlib32-mesa
+        \e[1;30m
+        xorg-server     -> Se encuentra en el paquete xorg
+        xorg-apps       -> Se encuentra en el paquete xorg
+        \e[0m"
 echo
 echo -e "\e[36m===================================================\e[0m"
 bash
@@ -102,7 +106,7 @@ echo -e   Para tarjeta grafica INTEL
 echo -e   Escrive:$  "\e[1;33m pacman -S xf86-video-intel intel-ucode \e[0m"
 echo
 echo -e   Si utilizamos una MV "virtualbox" "\e[1;35m los dos \e[0m"
-echo -e   Escrive:$  "\e[1;33m pacman -S virtualbox-guest-utils xf86-video-wmware \e[0m"
+echo -e   Escrive:$  "\e[1;33m pacman -S virtualbox-guest-utils xf86-video-vmware \e[0m"
 echo
 echo -e "\e[36m===================================================\e[0m"
 bash
@@ -120,23 +124,10 @@ echo
 echo -e "\e[36m===================================================\e[0m"
 bash
 clear
-echo -e "\e[36m===================================================\e[0m"
-echo   Copiamos el script de instalacion al directorio de usuario
-#cremos la variable $usuario
-echo
-echo "Pon el nombre de tu usuario:"
-echo
-read usuario
-echo
-echo -e   Escrive:$  "\e[1;33m cd .. \e[0m"
-echo -e   Escrive:$  "\e[1;33m cp -r arch /home/$usuario \e[0m"
-echo
-echo -e "\e[36m===================================================\e[0m"
-bash
-clear
+# Fin de la instalación notas:
 echo -e "\e[36m===================================================\e[0m"
 echo
-echo -e "\e[32m Ahora entraremos como usuario. \e[0m"
+echo -e "\e[32m Notas: Ahora entraremos como usuario. \e[0m"
 echo   "
         Al entrar como ususrio abre el directorio del script y lo lanzas
         
@@ -145,13 +136,13 @@ echo   "
         $ ./usuario.sh
 
         Salimos de root con exit
-       "
+        "
 echo -e "\e[36m===================================================\e[0m"
 echo
 read -p "Press enter para salir del script" 
 
 #echo -e color mate"\e[31m Rojo \e[0m"		color brillante"\e[1;31m Rojo \e[0m"
-#echo -e color mate"\e[32m Verde \e[0m"		color brillante"\e[1;32m Rojo \e[0m"
-#echo -e color mate"\e[33m Amarillo \e[0m"	color brillante"\e[1;33m Rojo \e[0m"
-#echo -e color mate"\e[34m Azul \e[0m"		color brillante"\e[1;34m Rojo \e[0m"
-#echo -e color mate"\e[35m Cyan \e[0m"		color brillante"\e[1;35m Rojo \e[0m"
+#echo -e color mate"\e[32m Verde \e[0m"		color brillante"\e[1;32m Verde \e[0m"
+#echo -e color mate"\e[33m Amarillo \e[0m"	color brillante"\e[1;33m Amarillo \e[0m"
+#echo -e color mate"\e[34m Azul \e[0m"		color brillante"\e[1;34m Azul \e[0m"
+#echo -e color mate"\e[35m Cyan \e[0m"		color brillante"\e[1;35m Cyan \e[0m"

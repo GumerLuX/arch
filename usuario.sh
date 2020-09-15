@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#version: 0.0
+#version: 0.1
 # https://github.com/SinLuX90/arch.git
 # 1r INICIO USUARIO
 # Preparar root, usuario sudo codecs y xorg
@@ -36,8 +36,8 @@ echo -e "\e[32m Ponemos el teclado en español \e[0m"
 echo
 echo -e   Escrive:$  "\e[1;33m localectl set-x11-keymap es \e[0m"
 echo    "
-        Este comando nos crea en la carpeta X11/xorg.conf un archivo de configuracion de nuestro teclado "00-keyboard.conf"
-        Podemos comprovarlo abiendolo con cat.
+    Este comando nos crea en la carpeta X11/xorg.conf un archivo de configuracion de nuestro teclado "00-keyboard.conf"
+    Podemos comprovarlo abiendolo con cat.
         "
 echo -e   Escrive:$  "\e[1;33m cat /etc/X11/xorg.conf.d/00-keyboard.conf \e[0m"
 echo
@@ -87,11 +87,12 @@ bash
 clear
 # Configuracion de Pacman, color y ponemos el comococos en la barra
 echo -e "\e[36m===================================================\e[0m"
+echo
 echo -e "\e[32m Configuracion de Pacman, ponemos color y activamos el comococos de la barra\e[0m"
 echo
 echo -e   Escrive:$  "\e[1;33m editamos el archivo "/etc/pacman.conf" \e[0m"
 echo    "
-    Descomentamos la linea #Color del archivo "/etc/pacman.conf"
+    Descomentamos el hastag de la linea #Color del archivo "/etc/pacman.conf"
     Añadimos al final del grupo color '"ILoveCandy"' sin comillas, las letras '"ILC"' son mayusculas.
     Desmarcamos las casillas de:
         [multilib]
