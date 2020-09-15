@@ -335,7 +335,8 @@ echo -e "\e[32m ESTABLECER CONTRASEÑA DE USUARIO \e[0m"
 echo
 echo    Configurando el sistema: Establecer contraseña del usuario:
 echo
-echo -e   Escrive:$  "\e[1;33m arch-chroot /mnt passwd  $usuario \e[0m"'-> Introducimos la contraseña:'
+echo -e   Escrive:$  "\e[1;33m arch-chroot /mnt passwd  $usuario \e[0m"
+echo    '     -> Introducimos la contraseña:'
 echo
 echo -e "\e[36m===================================================\e[0m"
 bash
