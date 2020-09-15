@@ -70,7 +70,7 @@ Terminado el primer script, reiniciamos el sistema y entramos como root.
 `$ root         -> introducimos la contraseña de root` 
 Y lanzamos el segundo script
 ```sh
-$ ls				    -> Comprobamos el directorio
+$ ls				   -> Comprobamos el directorio
 $ cd arch			  -> Entramos en el, y lanzamos el script
 $ ./root.sh
 ```
@@ -81,7 +81,7 @@ $ usuario       -> introducimos la contraseña de usuario
 ```
 
 ```sh
-$ ls				    -> Comprobamos el directorio
+$ ls				   -> Comprobamos el directorio
 $ cd arch			  -> Entramos en el, y lanzamos el script
 $ ./usuario.sh
 ```
