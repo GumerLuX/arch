@@ -66,14 +66,20 @@ Lanzamos el el script
 ```sh
 $ ./install.sh
 ```
-Terminado el primer script, reiniciamos y entramos como root
-y lanzamos el segundo script
+Terminado el primer script, reiniciamos el sistema y entramos como root.
+`$ root         -> introducimos la contraseña de root` 
+Y lanzamos el segundo script
 ```sh
 $ ls				-> Comprobamos el directorio
 $ cd arch			-> Entramos en el, y lanzamos el script
 $ ./root.sh
 ```
 Al finalizar entramos como usuario y lanzamos el tercer script
+```sh
+$ exit              -> para salir de root.
+$ usuario           -> introducimos la contraseña de usuario
+```
+
 ```sh
 $ ls				-> Comprobamos el directorio
 $ cd arch			-> Entramos en el, y lanzamos el script
@@ -94,7 +100,7 @@ $ Se realiza el comando
 En la próxima línea del `bash$` tenéis que poner **exit**
 
 ```sh
-$ exit 			-> para continuar con el script
+$ exit 			    -> para continuar con el script
 ```
 
 Recordar, cuando configuremos el disco e instalemos el kernel de linux, lanzaremos el orto script dentro del primero.
