@@ -72,19 +72,34 @@ Terminado el primer script, reiniciamos el sistema y entramos como root.
 
 Y lanzamos el segundo script
 ```sh
+<<<<<<< HEAD
 $ ls			-> Comprobamos el directorio
 $ cd arch 		-> Entramos en el, y lanzamos el script
+=======
+$ ls				   -> Comprobamos el directorio
+$ cd arch			  -> Entramos en el, y lanzamos el script
+>>>>>>> c7c280367094b4c498b47eeca760903709901291
 $ ./root.sh
 ```
 
 Al finalizar entramos como usuario y lanzamos el tercer script
 ```sh
+<<<<<<< HEAD
 $ exit			-> para salir de root.
 $ usuario		-> introducimos la contraseña de usuario
+=======
+$ exit          -> para salir de root.
+$ usuario       -> introducimos la contraseña de usuario
+>>>>>>> c7c280367094b4c498b47eeca760903709901291
 ```
 ```sh
+<<<<<<< HEAD
 $ ls			-> Comprobamos el directorio
 $ cd arch		-> Entramos en el, y lanzamos el script
+=======
+$ ls				   -> Comprobamos el directorio
+$ cd arch			  -> Entramos en el, y lanzamos el script
+>>>>>>> c7c280367094b4c498b47eeca760903709901291
 $ ./usuario.sh
 ``` 
 --- 
