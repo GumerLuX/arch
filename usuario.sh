@@ -148,6 +148,7 @@ echo -e   " \e[35m
 sleep 2s
 echo -e   " \e[35m
         Espero que hayais tenido una buena experienccia
+        Y allan aprendido algo...
         \e[0m "
 sleep 2s
 echo -e   " \e[35m

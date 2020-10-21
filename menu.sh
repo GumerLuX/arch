@@ -3,15 +3,16 @@ clear
 while :
 do
 echo -e "\e[36m===================================================\e[0m"
-    echo    " Escoja el escritorio "xfce gnome kde cinnamon " "
+    echo    " Escoja el escritorio "xfce gnome kde cinnamon Bspwm " "
     echo
     echo    "   1. xfce "
     echo    "   2. gnome"
     echo    "   3. plasma"
     echo    "   4. cinnamon"
-    echo    "   5. Salir, si no quiere instalar un entorno grafico"
+    echo    "   5. Bspwm"
+    echo    "   6. Salir, si no quiere instalar un entorno grafico"
     echo
-    echo -n "Seleccione una opcion [1 - 5]"
+    echo -n "Seleccione una opcion [1 - 6]"
     echo
 echo -e "\e[36m===================================================\e[0m"
     read opcion
@@ -25,7 +26,9 @@ echo -e "\e[36m===================================================\e[0m"
           source plasma;;
         4) echo "Instalmos el escritorio cinnamon y lightdm ";
         source cinnamon;;
-        5) echo "Presiona una enter para continuar...";
+        5) echo "Instalmos el escritorio Bspwm y lightdm ";
+        source Bspwm;;
+        6) echo "Presiona una enter para continuar...";
         exit;;
         *) echo "$opc No es correcto. Prueba otra vez";        
     esac
