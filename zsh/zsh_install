@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+
+# INSTALAR ZSH BSPWM ARCH LINUX
+
+## Vamos a instalar un nuevo terminal mas avanzado, el Zsh.
+
+# Instalando zsh
+sudo pacman -S zsh --noconfirm
+
+# Instalacion como usuario sindo
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+szh
+cp zsh/.p10k.zs ~/.p10k.zs
+
+# Instalacion como usuario root
+echo "Ponemos la contraseña de root"
+su
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+cp zsh/root/p10k.zsh /root/.p10k.zsh
+exit
+
+# Entrando en la shell zsh
+
+# Cambiando la shell de usuario
+sudo usermod --shell /usr/bin/zsh sindo
+
+# Cambiando la shell de root
+usermod --shell /usr/bin/zsh root
+
+# Editamos el archivo de .zshrc:
+# Para empezar eliminamos el de root y lo enlazamos con el de nuestro usuario:
+echo "Ponemos la contraseña de root"
+su
+cd ~/
+rm .zshrc
+# Creamos un enlace simbolico al de nuestro usuario:
+ln -s -f /home/sindo/.zshrc .zshrc
+
+# Instalacion el comando lsd
+cd /opt
+wget https://github.com/Peltoche/lsd/releases/download/0.18.0/lsd_0.18.0_amd64.deb
+sudo dpkg -i lsd_0.18.0_amd64.deb
+sudo rm /opt/lsd_0.18.0_amd64.deb
+
+# Instalamos el comando bat:
+cd /opt
+wget https://github.com/sharkdp/bat/releases/download/v0.16.0/bat_0.16.0_amd64.deb
+sudo dpkg -i bat_0.16.0_amd64.deb
+sudo rm /opt/bat_0.16.0_amd64.deb
+exit
+
+## Instalacion Buscador fzf
+# Instalamos para usuario
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+# Instalamos para root
+echo "Ponemos la contraseña de root"
+su
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+# Añadimos plugins a zsh:
+
+pacman -S zsh-autosuggestions
+pacman -S zsh-syntax-highlighting
+cd /usr/share/zsh/plugins/
+
+# Damos permisos de usuario a la carpeta zsh-autosuggestions
+chown sindo:sindo -R zsh-autosuggestions
+chown sindo:sindo -R zsh-syntax-highlighting
+
+# Instalacion del plugin sudo:
+cd /usr/share
+mkdir zsh-sudo
+cd zsh-sudo
+
+# Descargamos el plugin sudo
+wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
+
+cp zsh/.zshrc ~/.zshrc
+cp zsh/.p10k.zsh ~/.p10k.zsh

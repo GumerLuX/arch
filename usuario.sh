@@ -115,8 +115,8 @@ echo -E   include "'/usr/share/nano/*.nanorc'"
 echo    "
         Podemos hacerlo directamente desde consola con estos comandos:
         "
-echo -e "\e[33m     sed -i '/*.nanorc/s/^#//g' /etc/nanorc \e[0m"
-echo -e "\e[33m     sed -i '/set linenumbers/s/^#//g' /etc/nanorc \e[0m"
+echo -e "\e[33m     sudo sed -i '/*.nanorc/s/^#//g' /etc/nanorc \e[0m"
+echo -e "\e[33m     sudo sed -i '/set linenumbers/s/^#//g' /etc/nanorc \e[0m"
 echo
 echo -e     Gurdamos y Salimos "Crtl + o y Crtl + x"
 echo -e "\e[36m===================================================\e[0m"
@@ -129,7 +129,7 @@ echo -e "\e[32m Instalando el entorno grafico, 'escritorio': \e[0m"
 echo    "
         En Linux tenemos muchos entornos graficos:
         En este escript solo mostrare estos cuatro, 
-        'xfce gnome Plasma cinnamon'
+        'xfce gnome Plasma cinnamon bspwm'
         "
 read -p "Press enter para elegir el escritorio"
 ./menu.sh

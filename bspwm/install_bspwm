@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+
+# INSTALAR BSPWM ARCH LINUX
+
+# Instalando Utilidades
+sudo pacman -S git wget tilix rofi p7zip file-roller thunar gedit vlc compton  feh  net-tools --noconfirm
+sudo pacman -S firefox firefox-i18n-es-es --noconfirm
+sudo pacamn -S chromium --noconfirm
+# Instalando bspwm
+sudo pacman -S bspwm sxhkd
+
+# Instalando el Display Manager (D.M) gestor de inicio de sesion - Activando
+sudo pacman -S lightdm lightdm-gtk-greeter
+systemctl enable lightdm.service
+
+# Configurando el escritorio bspwm
+mkdir -p ~/.config/{bspwm,sxhkd}
+cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/
+cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/
+chmod u+x ~/.config/bspwm/bspwmrc
+touch ~/.xinitrc
+echo "sxhkd &" '\n'"exec bspwm" > ~/.xinitrc
+
+# Configuramos el compton
+mkdir .config/bspwm/scripts
+touch .config/bspwm/scripts/bspwm_resize
+chmod +x .config/bspwm/scripts/bspwm_resize
+mkdir ~/.config/compton
+touch ~/.config/compton/compton.conf
+
+# poniendo el fondo de pantalla
+mkdir ~/Imágenes/Wallapers
+
+# Instalar y configurar polybar
+yay -S polybar-git -noconfirm
+mkdir ~/.config/polybar
+cp /usr/share/doc/polybar/config ~./config/polybar
+
+touch ~/.config/polybar/launch.sh
+chmod +x ~/.config/polybar/launch.sh
+cp bspwm/Hack /usr/share/fonts/
+
+#Crear modulo de red
+mkdir ~/.config/bin
+touch ~/.config/bin/ethernet_status.sh
+chmod +x ~/.config/bin/ethernet_status.sh
+
+#Creando nuestro modulo de VPN:
+touch ~/.config/bin/vpnstatus.sh
+chmod +x ~/.config/bin/vpnstatus.sh
+
+# Instalar bloqueo de pantalla:
+sudo pacman -Ss i3lock imagemagick
+
+# Copiamos las carpetas de configuracion
+cp bspwm/bin ~/.config
+cp bspwm/bspwm ~/.config
+cp bspwm/compton ~/.config
+cp bspwm/polybar ~/.config
+cp bspwm/sxhkd ~/.config
