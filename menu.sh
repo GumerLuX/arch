@@ -27,7 +27,7 @@ echo -e "\e[36m===================================================\e[0m"
         4) echo "Instalmos el escritorio cinnamon y lightdm ";
         source cinnamon;;
         5) echo "Instalmos el escritorio Bspwm y lightdm ";
-        source /bspwm/install_bspwm;;
+        source install_bspwm;;
         6) echo "Presiona una enter para continuar...";
         exit;;
         *) echo "$opc No es correcto. Prueba otra vez";        

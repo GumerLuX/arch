@@ -1,0 +1,147 @@
+#Colours
+greenColour="\e[0;32m\033[1m"
+endColour="\033[0m\e[0m"
+redColour="\e[0;31m\033[1m"
+blueColour="\e[0;34m\033[1m"
+yellowColour="\e[0;33m\033[1m"
+purpleColour="\e[0;35m\033[1m"
+turquoiseColour="\e[0;36m\033[1m"
+grayColour="\e[0;37m\033[1m"
+
+
+# INSTALAR BSPWM ARCH LINUX
+echo -e ${blueColour}'\n   Instalando Utilidades'${endColour}
+echo -e ${yellowColour}'
+sudo pacman -S git wget tilix rofi p7zip file-roller thunar gedit vlc compton  feh  net-tools --noconfirm
+sudo pacman -S firefox firefox-i18n-es-es --noconfirm
+sudo pacamn -S chromium --noconfirm'${endColour}
+sleep 1
+sudo pacman -S git wget tilix rofi p7zip file-roller thunar gedit vlc compton  feh  net-tools --noconfirm
+sudo pacman -S firefox firefox-i18n-es-es --noconfirm
+sudo pacamn -S chromium --noconfirm
+clear
+
+# Instalando bspwm
+echo -e ${blueColour}'\n  Instalando bspwm'${endColour}
+echo -e ${yellowColour}'
+sudo pacman -S bspwm sxhkd
+'${endColour}
+sleep 1
+sudo pacman -S bspwm sxhkd
+clear
+
+# Instalando el Display Manager (D.M) gestor de inicio de sesion - Activando
+echo -e ${blueColour}'\n  Instalando el Display Manager (D.M) gestor de inicio de sesion - Activando'${endColour}
+echo -e ${yellowColour}'
+sudo pacman -S lightdm lightdm-gtk-greeter
+systemctl enable lightdm.service
+'${endColour}
+sleep 1
+sudo pacman -S lightdm lightdm-gtk-greeter
+systemctl enable lightdm.service
+clear
+
+# Configurando el escritorio bspwm
+echo -e ${blueColour}'\n   Configurando el escritorio bspwm'${endColour}
+echo -e ${yellowColour}'
+mkdir -p ~/.config/{bspwm,sxhkd}
+cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/
+cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/
+chmod u+x ~/.config/bspwm/bspwmrc
+touch ~/.xinitrc
+cp -r ~/arch/bspwm//bspwm ~/.config
+cp -r ~/arch/bspwm//sxhkd ~/.config
+'${endColour}
+sleep 1
+mkdir -p ~/.config/{bspwm,sxhkd}
+cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/
+cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/
+chmod u+x ~/.config/bspwm/bspwmrc
+touch ~/.xinitrc
+cp -r ~/arch/bspwm//bspwm ~/.config
+cp -r ~/arch/bspwm//sxhkd ~/.config
+clear
+
+# Configuramos el compton
+echo -e ${blueColour}'\n   # Configuramos el compton'${endColour}
+echo -e ${yellowColour}'
+mkdir .config/bspwm/scripts
+touch .config/bspwm/scripts/bspwm_resize
+chmod +x .config/bspwm/scripts/bspwm_resize
+mkdir ~/.config/compton
+touch ~/.config/compton/compton.conf
+cp -r ~/arch/bspwm//compton ~/.config
+'${endColour}
+sleep 1
+mkdir .config/bspwm/scripts
+touch .config/bspwm/scripts/bspwm_resize
+chmod +x .config/bspwm/scripts/bspwm_resize
+mkdir ~/.config/compton
+touch ~/.config/compton/compton.conf
+cp -r ~/arch/bspwm//compton ~/.config
+clear
+
+# poniendo el fondo de pantalla
+echo -e ${blueColour}'\n   Poniendo el fondo de pantalla'${endColour}
+echo -e ${yellowColour}'
+cp -r ~/arch/Wallapers/ ~/Imágenes/Wallapers
+'${endColour}
+sleep 1
+cp -r ~/arch/Wallapers/ ~/Imágenes/Wallapers
+clear
+
+# Instalar y configurar polybar
+echo -e ${blueColour}'\n   Instalar y configurar polybar'${endColour}
+echo -e ${yellowColour}'
+yay -S polybar-git -noconfirm
+mkdir ~/.config/polybar
+cp /usr/share/doc/polybar/config ~./config/polybarf
+touch ~/.config/polybar/launch.sh
+chmod +x ~/.config/polybar/launch.sh
+cp -r ~/arch/bspwm/Hack /usr/share/fonts/
+cp -r ~/arch/bspwm//polybar ~/.config
+'${endColour}
+sleep 1
+yay -S polybar-git -noconfirm
+mkdir ~/.config/polybar
+cp /usr/share/doc/polybar/config ~./config/polybarf
+touch ~/.config/polybar/launch.sh
+chmod +x ~/.config/polybar/launch.sh
+cp -r ~/arch/bspwm/Hack /usr/share/fonts/
+cp -r ~/arch/bspwm//polybar ~/.config
+clear
+
+# Crear modulo de red
+echo -e ${blueColour}'\n   Crear modulo de red'${endColour}
+echo -e ${yellowColour}'
+mkdir ~/.config/bin
+touch ~/.config/bin/ethernet_status.sh
+chmod +x ~/.config/bin/ethernet_status.sh
+'${endColour}
+sleep 1
+mkdir ~/.config/bin
+touch ~/.config/bin/ethernet_status.sh
+chmod +x ~/.config/bin/ethernet_status.sh
+clear
+
+# Creando nuestro modulo de VPN:
+echo -e ${blueColour}'\n   Creando nuestro modulo de VPN'${endColour}
+echo -e ${yellowColour}'
+touch ~/.config/bin/vpnstatus.sh
+chmod +x ~/.config/bin/vpnstatus.sh
+cp -r ~/arch/bspwm//bin ~/.config
+'${endColour}
+sleep 1
+touch ~/.config/bin/vpnstatus.sh
+chmod +x ~/.config/bin/vpnstatus.sh
+cp -r ~/arch/bspwm//bin ~/.config
+clear
+
+# Instalar bloqueo de pantalla:
+echo -e ${blueColour}'\n   Instalar bloqueo de pantalla'${endColour}
+echo -e ${yellowColour}'
+sudo pacman -Ss i3lock imagemagick
+'${endColour}
+sleep 1
+sudo pacman -Ss i3lock imagemagick
+clear
