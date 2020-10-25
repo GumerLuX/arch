@@ -1,84 +1,202 @@
 #!/usr/bin/env bash
 
+#Colours
+greenColour="\e[0;32m\033[1m"
+endColour="\033[0m\e[0m"
+redColour="\e[0;31m\033[1m"
+blueColour="\e[0;34m\033[1m"
+yellowColour="\e[0;33m\033[1m"
+purpleColour="\e[0;35m\033[1m"
+turquoiseColour="\e[0;36m\033[1m"
+grayColour="\e[0;37m\033[1m"
+
 # INSTALAR ZSH BSPWM ARCH LINUX
 
 ## Vamos a instalar un nuevo terminal mas avanzado, el Zsh.
 
 # Instalando zsh
+echo -e ${blueColour}'\n   Instalando zsh'${endColour}
+echo -e ${greenColour}'\n   Instalamos el terminal zsh'${endColour}
+echo -e ${yellowColour}'
 sudo pacman -S zsh --noconfirm
+\n'${endColour}
+read -p "Press enter para continuar"
+    sudo pacman -S zsh --noconfirm
+    clear
 
+## Instalacion de tema powerlevel10k
 # Instalacion como usuario sindo
+echo -e ${blueColour}'\n   Instalando el tema powerlevel10k'${endColour}
+echo -e ${greenColour}'\n   Hacemos la instalacion para nuestro usuario desde git.\nActivamos y configuramos el tema.\n
+## Para reconfigurar Zsh en caso de haber elegido mal escriba en el terminal zsh y escriba: 
+#  $ p10k configure
+#  Y copie de nuevo el archivo .p10k.zsh'${endColour}
+echo -e ${yellowColour}'
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 szh
-cp zsh/.p10k.zs ~/.p10k.zs
+cp /arch/zsh/.p10k.zsh ~/.p10k.zsh
+\n'${endColour}
+echo -e ${blueColour}'\nRecuerde poner '${grayColour}exit${endColour}' para salir de la configuracion de zsh\n'${endColour}
+read -p "Press enter para continuar"
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+    echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+    szh
+    cp /arch/zsh/.p10k.zsh ~/.p10k.zsh
+    clear
 
 # Instalacion como usuario root
-echo "Ponemos la contraseña de root"
-su
+echo -e ${blueColour}'\n   Instalacion como usuario root'${endColour}
+echo -e ${greenColour}'\n   Repetimos la configuracion igual pero para el usuario root\nEntramos como root:\n-> Password\n-> Configuramos\n-> copiamos el archivo.'${endColour}
+echo -e ${yellowColour}'
+sudo su
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
-cp zsh/root/p10k.zsh /root/.p10k.zsh
-exit
+zsh
+cp /arch/zsh/root.p10k.zsh ~/.p10k.zsh
+\n'${endColour}
+echo -e ${blueColour}'\nRecuerde poner '${grayColour}exit${endColour}' para salir de la configuracion de zsh\n'${endColour}
+read -p "Press enter para continuar"
+    sudo su
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+    echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+    zsh
+    cp zsh/root/p10k.zsh /root/.p10k.zsh
+    clear
 
-# Entrando en la shell zsh
-
-# Cambiando la shell de usuario
+# Cambiamos el la shell bash por la zsh:
+echo -e ${blueColour}'\n   Cambiamos la shell de bash por la zsh:'${endColour}
+echo -e ${greenColour}'\n   Cambiaremos tanto para usuario como para root'${endColour}
+echo -e ${yellowColour}'
 sudo usermod --shell /usr/bin/zsh sindo
-
-# Cambiando la shell de root
-usermod --shell /usr/bin/zsh root
+sudo usermod --shell /usr/bin/zsh root
+\n'${endColour}
+echo -e ${blueColour}'\nSi nos da error en la instalacion, lo podemos instalar desde AUR:\n
+'${grayColour}yay -S --noconfirm zsh-theme-powerlevel10k-git{endColour}'\n'${endColour}
+read -p "Press enter para continuar"
+    sudo usermod --shell /usr/bin/zsh root
+    sudo usermod --shell /usr/bin/zsh sindo
+    clear
 
 # Editamos el archivo de .zshrc:
-# Para empezar eliminamos el de root y lo enlazamos con el de nuestro usuario:
-echo "Ponemos la contraseña de root"
-su
+echo -e ${blueColour}'\n   Editamos el archivo de .zshrc:'${endColour}
+echo -e ${greenColour}'\n   Para empezar:\nCopiamos el archivo zshrc a nuestro usuario.\n-> Eliminamos el de root\n-> y lo enlazamos con el de nuestro usuario:'${endColour}
+echo -e ${yellowColour}'
+cp ~/arch/zsh/.zshrc ~/.zshrc
+sudo su
 cd ~/
 rm .zshrc
-# Creamos un enlace simbolico al de nuestro usuario:
 ln -s -f /home/sindo/.zshrc .zshrc
+\n'${endColour}
+read -p "Press enter para continuar"
+    cp ~/arch/zsh/.zshrc ~/.zshrc
+    sudo su
+    cd ~/
+    rm .zshrc
+    ln -s -f /home/sindo/.zshrc .zshrc
+    clear
 
+# Instalando plugins, lsd, bat:
+echo -e ${blueColour}'\n   Instalando plugins, lsd, bat:'${endColour}
+echo -e ${greenColour}'\n   Hacemos una descarga rapida y configuramos con dpkg. '${endColour}
+echo -e ${yellowColour}'
 # Instalacion el comando lsd
 cd /opt
-wget https://github.com/Peltoche/lsd/releases/download/0.18.0/lsd_0.18.0_amd64.deb
+sudo wget https://github.com/Peltoche/lsd/releases/download/0.18.0/lsd_0.18.0_amd64.deb
 sudo dpkg -i lsd_0.18.0_amd64.deb
 sudo rm /opt/lsd_0.18.0_amd64.deb
-
 # Instalamos el comando bat:
 cd /opt
-wget https://github.com/sharkdp/bat/releases/download/v0.16.0/bat_0.16.0_amd64.deb
+sudo wget https://github.com/sharkdp/bat/releases/download/v0.16.0/bat_0.16.0_amd64.deb
 sudo dpkg -i bat_0.16.0_amd64.deb
 sudo rm /opt/bat_0.16.0_amd64.deb
-exit
+cd ~/
+\n'${endColour}
+read -p "Press enter para continuar"
+    cd /opt
+    sudo wget https://github.com/Peltoche/lsd/releases/download/0.18.0/lsd_0.18.0_amd64.deb
+    sudo dpkg -i lsd_0.18.0_amd64.deb
+    sudo rm /opt/lsd_0.18.0_amd64.deb
+    # Instalamos el comando bat:
+    sudo wget https://github.com/sharkdp/bat/releases/download/v0.16.0/bat_0.16.0_amd64.deb
+    sudo dpkg -i bat_0.16.0_amd64.deb
+    sudo rm /opt/bat_0.16.0_amd64.deb
+    cd ~/
+    clear
 
-## Instalacion Buscador fzf
+# Instalacion Buscador fzf
+echo -e ${blueColour}'\n   Instalacion Buscador fzf'${endColour}
+echo -e ${greenColour}'\n   Aqui tenemos que hacer la instalacion tanto para nuestro usuario como para root\n-> Poner yes a todo'${endColour}
+echo -e ${yellowColour}'
 # Instalamos para usuario
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
-
 # Instalamos para root
-echo "Ponemos la contraseña de root"
-su
+sudo su
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+\n'${endColour}
+read -p "Press enter para continuar"
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
+echo -e ${yellowColour}'# Instalamos para root
+sudo su
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+\n'${endColour}
+    sudo su
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
+    sudo pacman -S fzf
+    clear
 
 # Añadimos plugins a zsh:
-
-pacman -S zsh-autosuggestions
-pacman -S zsh-syntax-highlighting
+echo -e ${blueColour}'\n   Añadimos plugins a zsh:'${endColour}
+echo -e ${greenColour}'\n   Descargamoslos plugins con pacman y les damos permisos de usuario.'${endColour}
+echo -e ${yellowColour}'
+sudo pacman -S zsh-autosuggestions
+sudo pacman -S zsh-syntax-highlighting
 cd /usr/share/zsh/plugins/
-
-# Damos permisos de usuario a la carpeta zsh-autosuggestions
-chown sindo:sindo -R zsh-autosuggestions
-chown sindo:sindo -R zsh-syntax-highlighting
+sudo chown sindo:sindo -R zsh-autosuggestions
+sudo chown sindo:sindo -R zsh-syntax-highlighting
+\n'${endColour}
+read -p "Press enter para continuar"
+    sudo pacman -S zsh-autosuggestions
+    sudo pacman -S zsh-syntax-highlighting
+    cd /usr/share/zsh/plugins/
+    sudo chown sindo:sindo -R zsh-autosuggestions
+    sudo chown sindo:sindo -R zsh-syntax-highlighting
+    clear
 
 # Instalacion del plugin sudo:
+echo -e ${blueColour}'\n   Instalacion del plugin sudo:'${endColour}
+echo -e ${greenColour}'\n   Vamos hacer la instalacion manual del plugin sudo\n
+-> Vamos al directorio  /usr/share\n
+-> creamos la carpeta zsh-sudo\n
+-> donde descargaremos el plugin'${endColour}
+echo -e ${yellowColour}'
 cd /usr/share
-mkdir zsh-sudo
+sudo mkdir zsh-sudo
 cd zsh-sudo
+sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
+\n'${endColour}
+read -p "Press enter para continuar"
+    cd /usr/share
+    sudo mkdir zsh-sudo
+    cd zsh-sudo
+    sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
+    clear
 
-# Descargamos el plugin sudo
-wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
+# Para finalizar copiamos de nuevo los archivos zshrc y p10k-zsh
+echo -e ${blueColour}'\n   Para finalizar copiamos de nuevo los archivos zshrc y p10k-zsh'${endColour}
+echo -e ${greenColour}'\n   Hacemos la copia de nuevo para modificar algunas instalaciones.'${endColour}
+echo -e ${yellowColour}'
+cp ~/arch/zsh/.zshrc ~/.zshrc
+cp ~/arch/zsh/.p10k.zsh ~/.p10k.zsh
+\n'${endColour}
+read -p "Press enter para continuar"
+    cp ~/arch/zsh/.zshrc ~/.zshrc
+    cp ~/arch/zsh/.p10k.zsh ~/.p10k.zsh
+    clear
 
-cp zsh/.zshrc ~/.zshrc
-cp zsh/.p10k.zsh ~/.p10k.zsh
+read -p "Press enter para salir"
