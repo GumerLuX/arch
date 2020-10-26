@@ -156,16 +156,14 @@ echo -e ${greenColour}'\n   Descargamoslos plugins con pacman y les damos permis
 echo -e ${yellowColour}'
 sudo pacman -S zsh-autosuggestions
 sudo pacman -S zsh-syntax-highlighting
-cd /usr/share/zsh/plugins/
-sudo chown sindo:sindo -R zsh-autosuggestions
-sudo chown sindo:sindo -R zsh-syntax-highlighting
+sudo chown sindo:sindo -R /usr/share/zsh/plugins/zsh-autosuggestions
+sudo chown sindo:sindo -R /usr/share/zsh/plugins/zsh-syntax-highlighting
 \n'${endColour}
 read -p "Press enter para continuar"
     sudo pacman -S zsh-autosuggestions
     sudo pacman -S zsh-syntax-highlighting
-    cd /usr/share/zsh/plugins/
-    sudo chown sindo:sindo -R zsh-autosuggestions
-    sudo chown sindo:sindo -R zsh-syntax-highlighting
+    sudo chown sindo:sindo -R /usr/share/zsh/plugins/zsh-autosuggestions
+    sudo chown sindo:sindo -R /usr/share/zsh/plugins/zsh-syntax-highlighting
     clear
 
 # Instalacion del plugin sudo:
