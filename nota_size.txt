@@ -1,0 +1,5 @@
+Para tener mas espacio, añadimos una memoria virtual:
+Escribimos en el terminal:
+
+'mount -o remount,size=2G /run/archiso/cowspace' -> Enter
+
