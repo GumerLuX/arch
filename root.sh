@@ -4,6 +4,17 @@
 # https://github.com/SinLuX90/arch.git
 # 1r INICIO ROOT
 # Preparar root, usuario sudo codecs y xorg
+
+#Colours
+greenColour="\e[0;32m\033[1m"
+endColour="\033[0m\e[0m"
+redColour="\e[0;31m\033[1m"
+blueColour="\e[0;34m\033[1m"
+yellowColour="\e[0;33m\033[1m"
+purpleColour="\e[0;35m\033[1m"
+turquoiseColour="\e[0;36m\033[1m"
+grayColour="\e[0;37m\033[1m"
+
 clear
 echo -e "\e[36m===================================================\e[0m"
 echo
@@ -21,7 +32,7 @@ echo
 # Habilitar Network Manager
 echo -e "\e[36m===================================================\e[0m"
 echo
-echo -e "\e[32m Havilitamos el NetworkManager: \e[0m"
+echo -e "\e[32m Havilitamos el NetworkManager para poder tener red: \e[0m"
 echo
 echo -e   Escrive:$  "\e[1;33m systemctl start NetworkManager.service \e[0m"
 echo -e   Escrive:$  "\e[1;33m systemctl enable NetworkManager.service \e[0m"
@@ -34,7 +45,7 @@ echo
 echo	Tenemos nuestro Arch instalado y empezamos a configurarlo:
 echo
 echo -e "\e[32m Actualizamos sistema e instalmos el mousse para la consola \e[0m"
-echo
+echo -e "${grayColour}Y lo avtvamos con systemectl\n${endColour}"
 echo -e   Escrive:$  "\e[1;33m pacman -Syu gpm \e[0m"
 echo -e   Escrive:$  "\e[1;33m systemctl start gpm.service \e[0m"
 echo
@@ -132,8 +143,7 @@ echo
 echo   Copiamos el script de instalacion
 echo
 echo -e   Escrive:$  "\e[1;33m cd .. \e[0m"
-echo -e   Escrive:$  "\e[1;33m cp -rp compartir /mnt/home/$usuario \e[0m"
-echo -e   Escrive:$  "\e[1;33m git clone https://github.com/SinLuX90/compartir.git /mnt/home/$usuario \e[0m"
+echo -e   Escrive:$  "\e[1;33m cp -rp arch /mnt/home/$usuario \e[0m"
 echo
 echo -e "\e[36m===================================================\e[0m"
 bash

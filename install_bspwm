@@ -10,7 +10,7 @@ purpleColour="\e[0;35m\033[1m"
 turquoiseColour="\e[0;36m\033[1m"
 grayColour="\e[0;37m\033[1m"
 
-
+clear
 # INSTALAR BSPWM ARCH LINUX
 echo -e ${blueColour}'\n   Instalando Utilidades'${endColour}
 echo -e ${greenColour}'\n   Vamos a instalar estos programas:'${endColour}
@@ -102,12 +102,12 @@ clear
 echo -e ${blueColour}'\n   Instalar y configurar polybar'${endColour}
 echo -e ${greenColour}'\n   Durante la instalacion del polybar "podemos ir a tomar cafe"\n nos va a pedir el password de usuario,\n si se pasa el tienpo y no poneis el password hay que instalar de nuevo.\n Lo podeis hacer despues del rienicio.'${endColour}
 echo -e ${yellowColour}'
-yay -S polybar-git -noconfirm
+yay -Sy polybar-git -noconfirm
 mkdir ~/.config/polybar
 cp /usr/share/doc/polybar/config ~./config/polybarf
 touch ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/launch.sh
-cp -r ~/arch/bspwm/Hack /usr/share/fonts/
+sudo cp -r ~/arch/bspwm/Hack /usr/share/fonts/
 cp -r ~/arch/bspwm//polybar ~/.config
 \n'${endColour}
 read -p "Press enter para continuar"
@@ -116,7 +116,7 @@ mkdir ~/.config/polybar
 cp /usr/share/doc/polybar/config ~./config/polybarf
 touch ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/launch.sh
-cp -r ~/arch/bspwm/Hack /usr/share/fonts/
+sudo cp -r ~/arch/bspwm/Hack /usr/share/fonts/
 cp -r ~/arch/bspwm//polybar ~/.config
 clear
 

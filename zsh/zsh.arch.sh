@@ -11,16 +11,15 @@ turquoiseColour="\e[0;36m\033[1m"
 grayColour="\e[0;37m\033[1m"
 
 # INSTALAR ZSH BSPWM ARCH LINUX
-
 ## Vamos a instalar un nuevo terminal mas avanzado, el Zsh.
-
+clear
 # (1)Instalando zsh
 echo -e ${blueColour}'\n   Instalando zsh'${endColour}
 echo -e ${greenColour}'\n   Instalamos el terminal zsh'${endColour}
 echo -e ${yellowColour}'
 sudo pacman -Sy zsh --noconfirm
 yay -Sy dpkg --noconfirm
-\n'${endColour}
+'${endColour}
 read -p "Press enter para continuar"
     sudo pacman -Sy zsh --noconfirm
     yay -Sy dpkg
@@ -31,11 +30,11 @@ echo -e ${blueColour}'\n   Instalacion de tema powerlevel10k'${endColour}
 echo -e ${greenColour}'\n   Instalamos desde AUR'${endColour}
 echo -e ${yellowColour}'
 yay -Sy --noconfirm zsh-theme-powerlevel10k-git --noconfirm
-echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/
-\n'${endColour}
+sudo echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+'${endColour}
 read -p "Press enter para continuar"
     yay -Sy --noconfirm zsh-theme-powerlevel10k-git --noconfirm
-    echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+    sudo echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
     clear
 
 # (3)Configurando zsh usuario
@@ -47,9 +46,9 @@ Estas son las configuraciones que uso. Anotarlas en un papel
 4-3(Raibon), 5-1(Unicode), 6-1(24H), 7-1 (Anglet/), 8-2(Blurred)
 9-2(Blurred), 10-1(una linea), 11-2(Sparce), 12-2(many icons), 13-2(Fluent),
 14-n(No), 15-1(off), 16-y(yes), 17-y(yes) Aplicar cambios a .zshrc
-\n'${endColour}
-read -p "Press enter para continuar"
-    echo -e escrivimos en el terminal${yellowColour}'zsh\n'${endColour} y lo configuramos, ${yellowColour}exit${endColour} para salir
+'${endColour}
+    echo -e Escrivimos en el terminal${yellowColour}' zsh'${endColour} y lo configuramos,'\n' ${yellowColour}exit${endColour} para salir'\n'
+    read -p "Press enter para continuar"
     bash
     clear    
     
@@ -59,10 +58,11 @@ echo -e ${greenColour}'\n   Configurando zsh en el terminal'${endColour}
 echo -e ${yellowColour}'
 Repetimos los pasos de usuario pero como root
 ponemos en la terminal:
-sudo su -> passwor -> editamos
+sudo su -> passwor 
+zsh     -> editamos
 \n'${endColour}
-read -p "Press enter para continuar"
-    echo -e escrivimos en el terminal${yellowColour}'zsh\n'${endColour} y lo configuramos, ${yellowColour}exit${endColour} para salir
+    echo -e Escrivimos en el terminal${yellowColour}' zsh'${endColour} y lo configuramos,'\n' ${yellowColour}exit${endColour} para salir'\n'
+    read -p "Press enter para continuar"
     bash
     clear
     
@@ -94,8 +94,8 @@ echo -e ${greenColour}'\n   Descargamoslos plugins con pacman y les damos permis
 echo -e ${yellowColour}'
 sudo pacman -S zsh-autosuggestions
 sudo pacman -S zsh-syntax-highlighting
-sudo chown sindo:sindo -R zsh-autosuggestions
-sudo chown sindo:sindo -R zsh-syntax-highlighting
+sudo chown sindo:sindo -R /usr/share/zsh/plugins/zsh-autosuggestions
+sudo chown sindo:sindo -R /usr/share/zsh/plugins/zsh-syntax-highlighting
 \n'${endColour}
 read -p "Press enter para continuar"
     sudo pacman -S zsh-autosuggestions

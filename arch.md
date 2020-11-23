@@ -14,7 +14,7 @@ Al finalizar un `comando` ay que poner **exit** para continuar.
  
 Nos descargamos la ISO desde la página oficial https://www.archlinux.org/download/
 
-O directamente desde aquí: http://ftp.rediris.es/mirror/archlinux/iso/2020.10.01/archlinux-2020.10.01-x86_64.iso 
+O directamente desde aquí: http://ftp.rediris.es/mirror/archlinux/iso/2020.11.01/archlinux-2020.11.01-x86_64.iso 
 
 Cargamos la iso en nuestro PC o M. Virtual, una vez iniciado el sistema nos descargamos el git del repositorio:
 

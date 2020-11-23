@@ -1,26 +1,38 @@
 #!/bin/bash
 
-#version: 0.1
+#version: 0.2
 # https://github.com/SinLuX90/arch.git
+
+#Colours
+greenColour="\e[0;32m\033[1m"
+redColour="\e[0;31m\033[1m"
+blueColour="\e[0;34m\033[1m"
+yellowColour="\e[0;33m\033[1m"
+purpleColour="\e[0;35m\033[1m"
+turquoiseColour="\e[0;36m\033[1m"
+grayColour="\e[0;37m\033[1m"
+endColour="\033[0m\e[0m"
+fincolor="\e[0m"
+
 #PARTICIONAR DISCO CON FDISK
 clear
-echo -e "\e[36m===================================================\e[0m"
+echo -e "${blueColour}===================================================${fincolor}"
 echo
-echo -e "   \e[1;34m PARTICIONAR DISCO CON FDISK: \e[0m"
+echo -e "   ${greenColour} PARTICIONAMOS EL DISCO CON FDISK: ${fincolor}"
 echo -e "
     Vamos a particionar el disco de nuestra máquina,
-    Si sabéis lo que hacéis lo podéis hacer con el comando:\e[1;33m cfdisk\e[0m,
-    o \e[1;33mfdisk\e[0m directamente, introduciendo el comando en la consola.
+    Si sabéis lo que hacéis lo podéis hacer con el comando:${yellowColour} cfdisk${fincolor},
+    o ${yellowColour}fdisk${fincolor} directamente, introduciendo el comando en la consola.
     
     Nosotros lo aremos con el comando fdisk, y estos serán los pasos a seguir.
 "
-echo -e "\e[36m===================================================\e[0m"
+echo -e "${blueColour}===================================================${fincolor}"
 read -p "Press enter para continuar" 
 # PASOS A SEGUIR
 clear
-echo -e "\e[36m===================================================\e[0m"
+echo -e "${blueColour}===================================================${fincolor}"
 echo
-echo -e "   \e[1;34m PASOS A SEGUIR: \e[0m"
+echo -e "   ${greenColour} PASOS A SEGUIR: ${fincolor}"
 echo "
         1-	Identificamos el disco y lo anotamos
         2-	Lo formateamos a ms2 para poder utilizarlo
@@ -28,33 +40,34 @@ echo "
         4-	Creamos la partición del sistema /
         5-	Creamos la partición swap
 "
-echo -e "\e[36m===================================================\e[0m"
+echo -e "${blueColour}===================================================${fincolor}"
 read -p "Press enter para continuar" 
 # CONFIRMAMOS NUESTRO DISCO
 clear
-echo -e "\e[36m===================================================\e[0m"
+echo -e "${blueColour}===================================================${fincolor}"
 echo
-echo -e "\e[1;34m CONFIRMAMOS NUESTRO DISCO: \e[0m"
+echo -e "${greenColour} CONFIRMAMOS NUESTRO DISCO: ${fincolor}"
 echo "
     Desde aqui podeis editarlo manualmente, o seguir el tutorial.
     Con el comando fdisk –l identificamos nuestro disco “En este caso solo hay uno y será sda
     "
-echo -e   Escrive:$  "\e[1;33m fdisk -l \e[0m" para comprobar el disco
+echo -e   Escrive:$  "${yellowColour} fdisk -l ${fincolor}" para comprobar el disco
 echo
-echo -e   Escrive:$  "\e[1;33m exit \e[0m" para continuar
-echo -e "\e[36m===================================================\e[0m"
+echo -e   Escrive:$  "${yellowColour} exit ${fincolor}" para continuar
+echo -e "${blueColour}===================================================${fincolor}"
 bash
 clear
 # IDENTIFICACION DE DISCO VARIABLE
 clear
-echo -e "\e[36m===================================================\e[0m"
+echo -e "${blueColour}===================================================${fincolor}"
 echo
-echo -e "\e[1;34m IDENTIFICACION DE DISCO CON VARIABLE: \e[0m"
+echo -e "${greenColour} IDENTIFICACION DE DISCO CON VARIABLE: ${fincolor}"
 echo "
+    Tenemos nuestro disco identificado: 
     Lo formateamos a “ms2” para poder utilizarlo
     Introducimos el nombre del disco en el bash.
     "
-sleep 3s
+sleep 2s
 echo "Cual es el disco a convertir (ej: sda)"
 # cremos la variable $disco
 read disco
@@ -62,57 +75,69 @@ echo "
     Copiamos el resultado y lo pegamos en el bash$
     Tanto el "metodo 1" como el "metodo 2" son iguales de factibles:
     "
-echo -e Metodo 1:$  "\e[1;33m (echo o; echo w) | fdisk /dev/$disco \e[0m"
+echo -e Metodo 1:$  "${yellowColour} (echo o; echo w) | fdisk /dev/$disco ${fincolor}"
 echo -E Metodo 2:'$  echo -e "o\n w" | fdisk /dev/'$disco
 bash
 # CREAMOS LA PARTICION BOOT
 clear
-echo -e "\e[36m===================================================\e[0m"
+echo -e "${blueColour}===================================================${fincolor}"
 echo
-echo -e "\e[1;34m CREAMOS LA PARTICION BOOT Y LA ACTIVAMOS: \e[0m"
+echo -e "${greenColour} CREAMOS LA PARTICION BOOT Y LA ACTIVAMOS: ${fincolor}"
 echo "
-    Formateado nuestro disco vamos a crear las particiones, empezamos por la “boot”.
+    Empezamos por la particion “boot”.
     Para la partición “boot” ponemos 500M de espacio,
     y lo hacemos con este comando.
-" 
+"
+sleep 2s
+echo "Ponemos el tamaño de la particion boot (ej: 500M)"
+# cremos la variable $disco
+read p_boot
 echo "
     Copiamos el resultado y lo pegamos en el bash$
     Tanto el "metodo 1" como el "metodo 2" son iguales de factibles:
     "   
-echo -e Metodo 1:$  "\e[1;33m (echo n; echo p; echo 1; echo  ; echo +500M; echo a; echo w;) | fdisk /dev/$disco \e[0m"
-echo -E Metodo 2:'$  echo -e "n\np\n1\n\n+500M\na\n w" | fdisk /dev/'$disco
+echo -e Metodo 1:$  "${yellowColour} (echo n; echo p; echo 1; echo  ; echo +$p_boot; echo a; echo w;) | fdisk /dev/$disco ${fincolor}"
+echo -E Metodo 2:'$  echo -e "n\np\n1\n\n+'$p_boot'\na\n w" | fdisk /dev/'$disco
 bash
 # CREAMOS LA PARTICION DEL SISTEMA
 clear
-echo -e "\e[36m===================================================\e[0m"
+echo -e "${blueColour}===================================================${fincolor}"
 echo
-echo -e "\e[1;34m CREAMOS LA PARTICION DEL SISTEMA /: \e[0m"
+echo -e "${greenColour} CREAMOS LA PARTICION DEL SISTEMA /: ${fincolor}"
 echo "
-    Escogemos 27.5G de espacio para root /,
-    copiamos el comando:
+    Escogemos 27.5G de espacio para root /, copiamos el comando:
     "
+sleep 2s
+echo "Ponemos el tamaño de la particion / 'root' (ej: 27.5G)"
+# cremos la variable $disco
+read p_root
 echo "
     Copiamos el resultado y lo pegamos en el bash$
     Tanto el "metodo 1" como el "metodo 2" son iguales de factibles:
     "
-echo -e Metodo 1:$  "\e[1;33m (echo n; echo p; echo 2; echo  ; echo +27.5G; echo w;) | fdisk /dev/$disco \e[0m"
-echo -E Metodo 2:'$  echo -e "n\np\n2\n\n+27.5G\n w" | fdisk /dev/'$disco
+
+echo -e Metodo 1:$  "${yellowColour} (echo n; echo p; echo 2; echo  ; echo +$p_root; echo w;) | fdisk /dev/$disco ${fincolor}"
+echo -E Metodo 2:'$  echo -e "n\np\n2\n\n+'$p_root'\n w" | fdisk /dev/'$disco
 bash
 # CREAMOS LA PARTICION SWAP
 clear
-echo -e "\e[36m===================================================\e[0m"
+echo -e "${blueColour}===================================================${fincolor}"
 echo
-echo -e "\e[1;34m CREAMOS LA PARTICION SWAP: \e[0m"
+echo -e "${greenColour} CREAMOS LA PARTICION SWAP: ${fincolor}"
 echo "
     Dejamos los espacios en blanco, para el tamaño.
     Por defecto coge el que queda, copiamos el comando:
     "
+    sleep 2s
+echo "Ponemos el tamaño para la particion swap o intercambio (ej: 2G)"
+# cremos la variable $disco
+read p_swap
 echo "
     Copiamos el resultado y lo pegamos en el bash$
     Tanto el "metodo 1" como el "metodo 2" son iguales de factibles:
     "
-echo -e Metodo 1:$  "\e[1;33m (echo n; echo p; echo 3; echo  ; echo  ; echo t; echo 3; echo 82; echo w;) | fdisk /dev/$disco \e[0m"
-echo -E Metodo 2:'$  echo -e "n\np\n3\n\n\n t\n3\n82\n w" | fdisk /dev/'$disco
+echo -e Metodo 1:$  "${yellowColour} (echo n; echo p; echo 3; echo  ; echo $p_swap; echo t; echo 3; echo 82; echo w;) | fdisk /dev/$disco ${fincolor}"
+echo -E Metodo 2:'$  echo -e "n\np\n3\n\n+'$p_swap' t\n3\n82\n w" | fdisk /dev/'$disco
 bash
 read -p "Press enter para continuar la instalacion + exit" 
 exit

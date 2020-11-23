@@ -1,3 +1,4 @@
+clear
 echo -e "\e[36m===================================================\e[0m"
 echo
 echo -e "\e[32m Instalamos el escritorio Plasma KDE: \e[0m"
@@ -37,6 +38,6 @@ bash
 clear
 echo -e "\e[36m===================================================\e[0m"
 echo
-read -p "Presione enter para continuar la instalación" 
-exit
+read -p "Presione enter para continuar la instalación"
+echo 
 echo -e "\e[36m===================================================\e[0m"
