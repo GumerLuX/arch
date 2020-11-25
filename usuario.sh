@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#version: 0.1
+#version: 0.3
 # https://github.com/SinLuX90/arch.git
 # 1r INICIO USUARIO
 # Preparar root, usuario sudo codecs y xorg

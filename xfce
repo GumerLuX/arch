@@ -1,3 +1,5 @@
+#version: 0.3
+# https://github.com/SinLuX90/arch.git
 echo -e "\e[36m===================================================\e[0m"
 echo
 echo -e "\e[32m Instalamos el escritorio xfce: \e[0m"
@@ -24,6 +26,6 @@ bash
 clear
 echo -e "\e[36m===================================================\e[0m"
 echo
-read -p "Presiona enter para continuar la instalación" 
+read -p "Presiona enter para volver al menu de escritorio" 
+./menu.sh
 exit
-echo -e "\e[36m===================================================\e[0m"

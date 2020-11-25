@@ -1,4 +1,6 @@
-#!/bin/bash 
+#!/bin/bash
+#version: 0.3
+# https://github.com/SinLuX90/arch.git
 clear
 while :
     do

@@ -1,0 +1,51 @@
+#version: 0.3
+# https://github.com/SinLuX90/arch.git
+echo -e "\e[36m===================================================\e[0m"
+echo
+echo -e "\e[32m Instalamos el escritorio bspwm: \e[0m"
+echo
+echo -e   Escribe:$  "\e[1;33m sudo pacman -Sy bspwm sxhkd \e[0m"
+echo
+echo -e "\e[36m===================================================\e[0m"
+bash
+clear
+echo -e "\e[36m===================================================\e[0m"
+echo
+echo -e "\e[32m Instalamos el gestores de pantalla DM: \e[0m"
+echo
+echo -e   Escribe:$  "\e[1;33m sudo pacman -S lightdm-gtk-greeter \e[0m"
+echo
+echo -e "\e[36m===================================================\e[0m"
+bash
+clear
+echo -e "\e[36m===================================================\e[0m"
+echo
+echo -e "\e[32m y lo activamos asi: \e[0m"
+echo
+echo -e   Escribe:$  "\e[1;33m systemctl enable lightdm.service \e[0m"
+echo
+echo -e "\e[36m===================================================\e[0m"
+bash
+clear
+echo -e "\e[36m===================================================\e[0m"
+echo
+echo -e "\e[32m Creamos el archivo xinitrc para pode iniciar las X, y añadimos estas lineas: \e[0m"
+echo
+echo -e  Escribe:$  "\e[1;33m touch ~/.xinitrc \e[0m"
+echo
+echo -e "\e[36m===================================================\e[0m"
+bash
+clear
+echo -e "\e[36m===================================================\e[0m"
+echo -e "\e[32m Editamos el archivo xinitrc, y añadimos estas lineas: \e[0m"
+echo
+echo -e  Escribe 1º:$  "\e[1;33m  echo sxhkd > ~/.xinitrc \e[0m"
+echo -e  Escribe 2º:$  "\e[1;33m  echo exec bspwm >> ~/.xinitrc \e[0m"
+echo
+echo -e "\e[36m===================================================\e[0m"
+bash
+clear
+echo -e "\e[36m===================================================\e[0m"
+read -p "Presiona enter para volver al menu de escritorio" 
+./menu.sh
+exit

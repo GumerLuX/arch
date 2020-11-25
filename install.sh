@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#version: 0.2
+#version: 0.3
 # https://github.com/SinLuX90/arch.git
 
 #Colours
@@ -55,7 +55,7 @@ echo -e "${greenColour} ACTUALIZAR REPOSITORIOS E INSTALAR EL RATON DE CONSOLA $
 echo
 echo	Actualizamos los repositorios e instalmos el mousse para la consola  
 echo    
-echo -e   Escrive:$  "${yellowColour} pacman -Syu gpm ${fincolor}"     y luego exit
+echo -e   Escrive:$  "${yellowColour} pacman -Sy gpm ${fincolor}"     y luego exit
 echo
 echo -e "${blueColour}===================================================${fincolor}"
 bash
@@ -257,11 +257,11 @@ echo -e   ' Borrar el hashtag "#" en el siguiente enunciado es_ES.UTF-8 UTF-8'
 echo
 echo -e   Escrive:$  "${yellowColour}  nano /mnt/etc/locale.gen ${fincolor}"
 echo
-echo  -e  "  Guardar el archivo (Ctrl+o), Para salir (Ctrl+x)"
+echo  -e  " Guardar el archivo (Ctrl+o), Para salir (Ctrl+x)"
 echo
 echo -e   ' Podemos hacerlo directamente con el comando:'
 echo
-echo -e   Escrive:$ "${yellowColour} sed -i '/es_ES.UTF/s/^#//g' /mnt/etc/locale.gen${fincolor"
+echo -e   Escrive:$ "${yellowColour} sed -i '/es_ES.UTF/s/^#//g' /mnt/etc/locale.gen${fincolor}"
 echo
 echo -e "${blueColour}===================================================${fincolor}"
 bash

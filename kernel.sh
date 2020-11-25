@@ -1,39 +1,44 @@
 #!/bin/bash
 
-#version: 0.1
+#version: 0.3
 # https://github.com/SinLuX90/arch.git
-#INSTALACION DEL KERNEL LINUX Y SISTEMA BASE
-# instalacion del Kernel Linux
-# Kernel  Ofiacialmente compatibles
+
+#Colours
+greenColour="\e[0;32m\033[1m"
+redColour="\e[0;31m\033[1m"
+blueColour="\e[0;34m\033[1m"
+yellowColour="\e[0;33m\033[1m"
+purpleColour="\e[0;35m\033[1m"
+turquoiseColour="\e[0;36m\033[1m"
+grayColour="\e[0;37m\033[1m"
+endColour="\033[0m\e[0m"
+fincolor="\e[0m"
 clear
-echo -e "\e[36m===================================================\e[0m"
-echo -e "\e[1;34m Vamos a instalar el kernel Linux, Sistema Base, Base-Devel, Headers, Firmware y utilidades. \e[0m"
-echo
-echo		Tenemos 4º tipos de version de kernel en Arch-Linux-Base-Devel
-echo
-echo -e   1- La"\e[1;33m Estable \e[0m"— Versión vanilla. Se instala con:"~$\e[1;33m linux \e[0m""\e[1;34m Recomendado \e[0m"
-echo        
-echo -e   2- La"\e[1;33m Hardened \e[0m"— Enfocado en la seguridad. Se instala con:"~$\e[1;33m linux-hardened \e[0m"
-echo
-echo -e   3- La"\e[1;33m (LTS) \e[0m"— De larga duración. Se instala con:"~$\e[1;33m linux-lts \e[0m""\e[1;34m en PCs. antiguos. \e[0m"
-echo	
-echo -e   4- La"\e[1;33m Kernel ZEN \e[0m"— Kernel mejorado, por hackers. Se instala con:"~$\e[1;33m linux-zen \e[0m""\e[1;34m Recomendado \e[0m"
-echo
-echo -e "\e[36m===================================================\e[0m"
-echo -e      1º - Recordar tenemos el disco montado /mnt/, hacemos la instalacion con este comando:
-echo -e "~$\e[1;33m pacstrap /mnt \e[0m" + el kernel, base, firmware, Headers y utilidades.
-echo -e "\e[36m===================================================\e[0m"
-echo -e      2º - El Sistema "\e[1;32mkernel, Base, Base-Devel, Firmware \e[0m". Se instala con:
-echo -e "~$\e[1;33m base base-devel linux-firmware\e[0m" para las cuatro es igual.
-echo -e "\e[36m===================================================\e[0m"
-echo -e      3º - Las"\e[1;32m Linux Headers. \e[0m"Se instala con:
-echo -e "~$\e[1;33m linux-headers, linux-hardened-headers, linux-lts-headers, linux-zen-headers \e[0m"
-echo -e "\e[36m===================================================\e[0m"
-echo -e     4º - Utilidades a instalar.
-echo -e "~$\e[1;33m grub os-prober ntfs-3g networkmanager gvfs gvfs-afc gvfs-mtp xdg-user-dirs nano dhcpcd --noconfirm \e[0m"
-echo -e "\e[36m===================================================\e[0m"
+echo -e "${turquoiseColour}===================================================${endColour}"
+echo -e "${blueColour} Vamos a instalar el kernel Linux, Sistema Base, Base-Devel, Headers, Firmware y utilidades. ${endColour}"
+echo -e      "  ${turquoiseColour}1º Instalamos el Kernel y las Headers${endColour}"   
+echo	Tenemos 4º tipos de version de kernel en Arch-Linux-Base-Devel
+echo -e   1- "La${yellowColour} Estable ${endColour}— Versión vanilla. Se instala con:
+          ~${yellowColour} linux linux-headers${endColour} ${blueColour} Recomendado ${endColour}"
+echo -e   2- "La${yellowColour} Hardened ${endColour}— Enfocado en la seguridad. Se instala con:
+          ~${yellowColour} linux-hardened linux-hardened-headers${endColour}"
+echo -e   3- "La${yellowColour} (LTS) ${endColour}— De larga duración. Se instala con:
+          ~${yellowColour} linux-lts linux-lts-headers${endColour} ${blueColour} en PCs. antiguos. ${endColour}"
+echo -e   4- "La${yellowColour} Kernel ZEN ${endColour}— Kernel mejorado, por hackers. Se instala con:
+          ~${yellowColour} linux-zen linux-zen-headers${endColour} ${blueColour} Recomendado ${endColour}"
+echo -e "${turquoiseColour}===================================================${endColour}"
+echo -e      "  ${turquoiseColour}2º Instalamos el Sistema Base, Base-Devel, Firmware${endColour}"
+echo -e   2º "El Sistema ${greenColour} Base, Base-Devel, Firmware. ${endColour}Se instala con:
+          ~${yellowColour} base base-devel linux-firmware${endColour}" para las cuatro es igual.
+echo -e "${turquoiseColour}===================================================${endColour}"
+echo -e      "  ${turquoiseColour}3º  Utilidades a instalar.${endColour}"
+echo -e      "~${yellowColour} grub os-prober ntfs-3g networkmanager gvfs gvfs-afc gvfs-mtp xdg-user-dirs nano dhcpcd --noconfirm ${endColour}"
+echo -e "${turquoiseColour}===================================================${endColour}"
+echo -e    3º - Recordar tenemos el disco montado /mnt/, hacemos la instalacion con este comando:
+echo -e "~${yellowColour} pacstrap /mnt ${endColour}" + el kernel, base, firmware, Headers y utilidades.
+echo -e "${turquoiseColour}===================================================${endColour}"
 echo -e   Ejemplo de instalacion con el kernel zen y utilidades: comandos a instalar
-echo -e "$~\e[1;33m pacstrap /mnt base base-devel linux-zen linux-zen-headers linux-firmware grub os-prober ntfs-3g networkmanager gvfs gvfs-afc gvfs-mtp xdg-user-dirs nano dhcpcd --noconfirm \e[0m"
-echo -e "\e[36m===================================================\e[0m"
+echo -e "~${yellowColour} pacstrap /mnt base base-devel linux-zen linux-zen-headers linux-firmware grub os-prober ntfs-3g networkmanager gvfs gvfs-afc gvfs-mtp xdg-user-dirs nano dhcpcd --noconfirm ${endColour}"
+echo -e "${turquoiseColour}===================================================${endColour}"
 bash
 clear

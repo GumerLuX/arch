@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#version: 0.2
+#version: 0.3
 # https://github.com/SinLuX90/arch.git
 
 #Colours
