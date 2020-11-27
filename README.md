@@ -127,11 +127,11 @@ $ exit			-> para continuar con el script
 
 Aqui teneis unas imajenes:
 
-> ![Inicio del escrpt](https://github.com/SinLuX90/arch/images/cmd1.jpg)
+> ![Inicio del escrpt]https://github.com/SinLuX90/arch/blob/master/images/cmd1.jpg)
 >
-> ![Inicio del escrpt](https://github.com/SinLuX90/arch/images/cmd2.jpg)
+> ![Inicio del escrpt](https://github.com/SinLuX90/arch/blob/master/images/cmd2.jpg)
 >
-> ![Inicio del escrpt](https://github.com/SinLuX90/arch/images/cmd3.jpg)
+> ![Inicio del escrpt](https://github.com/SinLuX90/arch/blob/master/images/cmd3.jpg)
 >
 > Recordar, cuando configuremos el disco e instalemos el kernel de linux, lanzaremos el orto script dentro del primero.
 
