@@ -14,7 +14,7 @@ Al finalizar un `comando` ay que poner **exit** para continuar.
 
 Nos descargamos la ISO desde la página oficial https://www.archlinux.org/download/
 
-O directamente desde aquí: http://ftp.rediris.es/mirror/archlinux/iso/2020.01.01/archlinux-2020.09.01-x86_64.iso
+O directamente desde aquí: http://ftp.rediris.es/mirror/archlinux/iso/2020.11.01/archlinux-2020.11.01-x86_64.iso
 
 Cargamos la iso en nuestro PC o M. Virtual, una vez iniciado el sistema nos descargamos el git del repositorio:
 
@@ -64,6 +64,7 @@ Nos encontramos con cinco scripts a utilizar en este orden
 > - Bº kernel.sh -> Instalación del Sistema Base y Kernel Linux
 >
 > 2º root.sh -> Configuración de Red y controladores gráficos.
+>
 > 3º usuario.sh -> Configuración de usuario y Escritorio gráfico.
 
 ### Nota
@@ -76,7 +77,7 @@ Dentro de la instalación, al poner el segundo script el de disco.sh hay que pon
 
 > Paso lo mismo al lanzar el script de kernel.sh
 
-Lanzamos el el script
+**Iniciamos el script**
 
 ```sh
 $ ./install.sh
@@ -124,10 +125,19 @@ En la próxima línea del `bash$` tenéis que poner **exit**
 $ exit			-> para continuar con el script
 ```
 
-Recordar, cuando configuremos el disco e instalemos el kernel de linux, lanzaremos el orto script dentro del primero.
+Aqui teneis unas imajenes:
+
+> ![Inicio del escrpt](images\cmd1.jpg)
+>
+> ![Inicio del escrpt](images\cmd2.jpg)
+>
+> ![Inicio del escrpt](images\cmd3.jpg)
+>
+> Recordar, cuando configuremos el disco e instalemos el kernel de linux, lanzaremos el orto script dentro del primero.
 
 Para salir de estos script hay que poner dos veces **exit**.
 Así hasta el final, ya veréis que en poco tiempo tenis **Arch Linux** instalado.
-No os dará tiempo para tomar :coffee:
+
+> No os dará tiempo para tomar :coffee:
 
 Cualquier duda podéis mandar un correo: sinlux90@gmail.com

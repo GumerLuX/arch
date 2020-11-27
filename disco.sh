@@ -138,6 +138,7 @@ echo "
     "
 echo -e Metodo 1:$  "${yellowColour} (echo n; echo p; echo 3; echo  ; echo $p_swap; echo t; echo 3; echo 82; echo w;) | fdisk /dev/$disco ${fincolor}"
 echo -E Metodo 2:'$  echo -e "n\np\n3\n\n+'$p_swap' t\n3\n82\n w" | fdisk /dev/'$disco
+echo -E Metodo 2:'$  echo -e "n\np\n3\n\n\n t\n3\n82\n w" | fdisk /dev/'$disco
 bash
 read -p "Press enter para continuar la instalacion + exit" 
 exit
