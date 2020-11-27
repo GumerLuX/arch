@@ -127,7 +127,7 @@ $ exit			-> para continuar con el script
 
 Aqui teneis unas imajenes:
 
-> ![Inicio del escrpt]https://github.com/SinLuX90/arch/blob/master/images/cmd1.jpg)
+> ![Inicio del escrpt](https://github.com/SinLuX90/arch/blob/master/images/cmd1.jpg)
 >
 > ![Inicio del escrpt](https://github.com/SinLuX90/arch/blob/master/images/cmd2.jpg)
 >
