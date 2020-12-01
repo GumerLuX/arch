@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #version: 0.3
-# https://github.com/SinLuX90/arch.git
+# https://github.com/GumerLuX/arch.git
 # 1r INICIO ROOT
 # Preparar root, usuario sudo codecs y xorg
 
@@ -19,7 +19,7 @@ clear
 echo -e "${turquoiseColour}===================================================${endColour}"
 echo
 echo -e "   Bienvenido a la configuracion de ${greenColour}ARCHLINUX${endColour}"
-echo -e "   Creado por ${greenColour}SinLuX90${endColour}"
+echo -e "   Creado por ${greenColour}GumerLuX${endColour}"
 echo  
 echo -e   "     ${greenColour} Vamos ha configurar el entorno root: ${endColour}"
 echo

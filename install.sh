@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #version: 0.3
-# https://github.com/SinLuX90/arch.git
+# https://github.com/GumerLuX/arch.git
 
 #Colours
 greenColour="\e[0;32m\033[1m"
@@ -19,7 +19,7 @@ clear
 echo -e "${blueColour}===================================================${fincolor}"
 echo
 echo -e "Bienvenido al instalador de ${turquoiseColour}ARCHLINUX${fincolor}"
-echo -e "Creado por ${greenColour}SinLuX90${fincolor}"  
+echo -e "Creado por ${greenColour}GumerLuX${fincolor}"  
 echo        Este escript funciona de esta manera:
 echo
 echo -e   1- Te muestra por pantalla el "${yellowColour} comando de este color ${fincolor}"  que tienes que escribir

@@ -32,7 +32,7 @@ $ pacman -Sy git
 ```
 Terminado nos bajamos el repositorio de este enlace: 
 ```sh
-$ git clone https://github.com/SinLuX90/arch.git
+$ git clone https://github.com/GumerLuX/arch.git
 ```
 ### Lanzamos el script
 
@@ -105,4 +105,4 @@ Para salir de estos script hay que poner dos veces **exit**.
 Así hasta el final, ya veréis que en poco tiempo tenis **Arch Linux** instalado.
 No os dará tiempo para tomar :coffee: 
 
-Cualquier duda podéis mandar un correo: sinlux90@gmail.com
+Cualquier duda podéis mandar un correo: GumerLuX@gmail.com

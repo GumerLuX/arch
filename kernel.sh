@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #version: 0.3
-# https://github.com/SinLuX90/arch.git
+# https://github.com/GumerLuX/arch.git
 
 #Colours
 greenColour="\e[0;32m\033[1m"
@@ -32,13 +32,13 @@ echo -e   2º "El Sistema ${greenColour} Base, Base-Devel, Firmware. ${endColour
           ~${yellowColour} base base-devel linux-firmware${endColour}" para las cuatro es igual.
 echo -e "${turquoiseColour}===================================================${endColour}"
 echo -e      "  ${turquoiseColour}3º  Utilidades a instalar.${endColour}"
-echo -e      "~${yellowColour} grub os-prober ntfs-3g networkmanager gvfs gvfs-afc gvfs-mtp xdg-user-dirs nano dhcpcd --noconfirm ${endColour}"
+echo -e      "~${yellowColour}grub os-prober ntfs-3g networkmanager gvfs gvfs-afc gvfs-mtp xdg-user-dirs nano dhcpcd --noconfirm ${endColour}"
 echo -e "${turquoiseColour}===================================================${endColour}"
-echo -e    3º - Recordar tenemos el disco montado /mnt/, hacemos la instalacion con este comando:
-echo -e "~${yellowColour} pacstrap /mnt ${endColour}" + el kernel, base, firmware, Headers y utilidades.
+echo -e     ${turquoiseColour}Recordar tenemos el disco montado /mnt/, hacemos la instalacion con este comando:${fincolor}
+echo -e "~${yellowColour}pacstrap /mnt ${endColour}" + el kernel, base, firmware, Headers y utilidades.
 echo -e "${turquoiseColour}===================================================${endColour}"
-echo -e   Ejemplo de instalacion con el kernel zen y utilidades: comandos a instalar
-echo -e "~${yellowColour} pacstrap /mnt base base-devel linux-zen linux-zen-headers linux-firmware grub os-prober ntfs-3g networkmanager gvfs gvfs-afc gvfs-mtp xdg-user-dirs nano dhcpcd --noconfirm ${endColour}"
+echo -e   ${turquoiseColour}Ejemplo de instalacion con el kernel zen y utilidades: comandos a instalar${fincolor}
+echo -e "~${yellowColour}pacstrap /mnt base base-devel linux-zen linux-zen-headers linux-firmware grub os-prober ntfs-3g networkmanager gvfs gvfs-afc gvfs-mtp xdg-user-dirs nano dhcpcd --noconfirm ${endColour}"
 echo -e "${turquoiseColour}===================================================${endColour}"
 bash
 clear

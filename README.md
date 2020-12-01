@@ -37,7 +37,7 @@ $ pacman -Sy git
 Terminado nos bajamos el repositorio de este enlace:
 
 ```sh
-$ git clone https://github.com/SinLuX90/arch.git
+$ git clone https://github.com/GumerLuX/arch.git
 ```
 
 Añadimos mas espacio a la memoria, con este comando:
@@ -127,11 +127,11 @@ $ exit			-> para continuar con el script
 
 Aqui teneis unas imajenes:
 
-> ![Inicio del escrpt](https://github.com/SinLuX90/arch/blob/master/images/cmd1.jpg)
+> ![Inicio del escrpt](https://github.com/GumerLuX/arch/blob/master/images/cmd1.jpg)
 >
-> ![Inicio del escrpt](https://github.com/SinLuX90/arch/blob/master/images/cmd2.jpg)
+> ![Inicio del escrpt](https://github.com/GumerLuX/arch/blob/master/images/cmd2.jpg)
 >
-> ![Inicio del escrpt](https://github.com/SinLuX90/arch/blob/master/images/cmd3.jpg)
+> ![Inicio del escrpt](https://github.com/GumerLuX/arch/blob/master/images/cmd3.jpg)
 >
 > Recordar, cuando configuremos el disco e instalemos el kernel de linux, lanzaremos el orto script dentro del primero.
 
@@ -140,4 +140,4 @@ Así hasta el final, ya veréis que en poco tiempo tenis **Arch Linux** instalad
 
 > No os dará tiempo para tomar :coffee:
 
-Cualquier duda podéis mandar un correo: sinlux90@gmail.com
+Cualquier duda podéis mandar un correo: GumerLuX@gmail.com

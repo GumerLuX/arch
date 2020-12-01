@@ -1,14 +1,14 @@
 #!/bin/bash
 
 #version: 0.3
-# https://github.com/SinLuX90/arch.git
+# https://github.com/GumerLuX/arch.git
 # 1r INICIO USUARIO
 # Preparar root, usuario sudo codecs y xorg
 clear
 echo -e "\e[36m===================================================\e[0m"
 echo
 echo -e "   Bienvenido a la configuracion de \e[32mARCHLINUX\e[0m"
-echo -e "   Creado por \e[32mSinLuX90\e[0m"
+echo -e "   Creado por \e[32mGumerLuX\e[0m"
 echo  
 echo -e   "     \e[32m Vamos ha configurar el entorno del usuario: \e[0m"
 echo

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #version: 0.3
-# https://github.com/SinLuX90/arch.git
+# https://github.com/GumerLuX/arch.git
 
 #Colours
 greenColour="\e[0;32m\033[1m"
