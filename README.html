@@ -1,0 +1,143 @@
+<!DOCTYPE html []>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="MarkdownViewer++" />
+    <title>README.md</title>
+    <style type="text/css">
+            
+/* Avoid page breaks inside the most common attributes, especially for exports (i.e. PDF) */
+td, h1, h2, h3, h4, h5, p, ul, ol, li {
+    page-break-inside: avoid; 
+}
+
+        </style>
+  </head>
+  <body>
+    <h1 id="manual-para-instalar-arch-linux">Manual para instalar Arch Linux</h1>
+    <p>Bienvenidos a este tutorial.</p>
+    <p>En este script que he creado ara más fácil la instalación de <strong>Arch Linux</strong></p>
+    <p>Con él se pueden ver los <code>comandos</code> que necesitas para la instalación y vosotros mismos los iréis poniendo.</p>
+    <p>De esta manera iréis aprendiendo más fácil.</p>
+    <p>Podéis cambiar los comandos, por otros que vosotros utilicéis.</p>
+    <p>Al finalizar cada <code>comando</code> hay que poner <strong>exit</strong> para continuar con el script.</p>
+    <h2 id="guia-de-utilizacion">Guía de utilización</h2>
+    <p>Nos descargamos la ISO desde la página oficial <a href="https://www.archlinux.org/download/">https://www.archlinux.org/download/</a></p>
+    <p>O directamente desde aquí: <a href="http://ftp.rediris.es/mirror/archlinux/iso/2020.12.01/archlinux-2020.12.01-x86_64.iso">http://ftp.rediris.es/mirror/archlinux/iso/2020.12.01/archlinux-2020.12.01-x86_64.iso</a></p>
+    <p>Cargamos la iso en nuestro PC o M. Virtual, una vez iniciado el sistema nos descargamos el git del repositorio:</p>
+    <p>
+      <strong>empecemos!</strong>
+    </p>
+    <h3 id="preparar-el-sistema-para-lanzar-el-script">Preparar el sistema para lanzar el script</h3>
+    <p>Para empezar ponemos el teclado en español:</p>
+    <pre>
+      <code class="language-sh">$ loadkeys es
+</code>
+    </pre>
+    <p>Actualizamos y descargamos git:</p>
+    <pre>
+      <code class="language-sh">$ pacman -Sy git
+</code>
+    </pre>
+    <p>Terminado nos bajamos el repositorio de este enlace:</p>
+    <pre>
+      <code class="language-sh">$ git clone https://github.com/GumerLuX/arch.git
+</code>
+    </pre>
+    <p>Para que el proceso de instalación no tenga problemas de espacio, creamos un espacio virtual.</p>
+    <p>Añadimos mas espacio a la memoria, con este comando:</p>
+    <pre>
+      <code class="language-sh">$ mount -o remount,size=2G /run/archiso/cowspace
+</code>
+    </pre>
+    <h3 id="lanzamos-el-script">Lanzamos el script</h3>
+    <p>Terminada la descarga y añadido el espacio virtual entramos en el directorio y ejecutamos el script.</p>
+    <pre>
+      <code class="language-sh">$ cd arch
+$ ls			-&gt; nos muestra los archivos
+install.sh disco.sh kernel.sh root.sh usuario.sh README.md ......
+</code>
+    </pre>
+    <p>Nos encontramos con cinco scripts a utilizar en este orden</p>
+    <blockquote>
+      <p>1º install.sh -&gt; Es un script de instalación <strong>Arch Linux</strong>. Dentro se utilizan el script de configuración del disco e instal·lació del sistema base y <strong>kernel linux</strong></p>
+      <ul>
+        <li>Aº disco.sh -&gt; Configuración del disco y particiones</li>
+        <li>Bº kernel.sh -&gt; Instalación del Sistema Base y Kernel Linux</li>
+      </ul>
+      <p>2º root.sh -&gt; Configuración de Red y controladores gráficos.</p>
+      <p>3º usuario.sh -&gt; Configuración de usuario y Escritorio gráfico.</p>
+    </blockquote>
+    <h3 id="nota">Nota</h3>
+    <p>Dentro de la instalación, al poner el segundo script el de disco.sh hay que poner dos veces <strong>exit</strong> para volver al script principal.</p>
+    <blockquote>
+      <p>El primer <strong>exit</strong> sale del script disco.sh</p>
+    </blockquote>
+    <blockquote>
+      <p>El segundo <strong>exit</strong> continua el primer script</p>
+    </blockquote>
+    <blockquote>
+      <p>Paso lo mismo al lanzar el script de kernel.sh</p>
+    </blockquote>
+    <p>
+      <strong>Iniciamos el script</strong>
+    </p>
+    <pre>
+      <code class="language-sh">$ ./install.sh
+</code>
+    </pre>
+    <p>Terminado el primer script, reiniciamos el sistema y entramos como root.
+<code>$ root -&gt; introducimos la contraseña de root</code></p>
+    <p>Y lanzamos el segundo script</p>
+    <pre>
+      <code class="language-sh">$ ls			-&gt; Comprobamos el directorio
+$ cd arch 		-&gt; Entramos en el, y lanzamos el script
+$ ./root.sh
+</code>
+    </pre>
+    <p>Al finalizar entramos como usuario y lanzamos el tercer script</p>
+    <pre>
+      <code class="language-sh">$ exit			-&gt; para salir de root.
+$ usuario		-&gt; introducimos la contraseña de usuario
+</code>
+    </pre>
+    <pre>
+      <code class="language-sh">$ ls			-&gt; Comprobamos el directorio
+$ cd arch		-&gt; Entramos en el, y lanzamos el script
+$ ./usuario.sh
+</code>
+    </pre>
+    <hr />
+    <p>El script se utiliza muy fácil:</p>
+    <p>El color amarillo que veis indica el comando a introducir en el bash:</p>
+    <p>Una vez introducido + Enter para ejecutar</p>
+    <pre>
+      <code class="language-sh">$ Se realiza el comando
+</code>
+    </pre>
+    <p>En la próxima línea del <code>bash$</code> tenéis que poner <strong>exit</strong></p>
+    <pre>
+      <code class="language-sh">$ exit			-&gt; para continuar con el script
+</code>
+    </pre>
+    <p>Aqui teneis unas imajenes:</p>
+    <blockquote>
+      <p>
+        <img src="https://github.com/GumerLuX/arch/blob/master/images/cmd1.jpg" alt="Inicio del escrpt" />
+      </p>
+      <p>
+        <img src="https://github.com/GumerLuX/arch/blob/master/images/cmd2.jpg" alt="Inicio del escrpt" />
+      </p>
+      <p>
+        <img src="https://github.com/GumerLuX/arch/blob/master/images/cmd3.jpg" alt="Inicio del escrpt" />
+      </p>
+      <p>Recordar, cuando configuremos el disco e instalemos el kernel de linux, lanzaremos el orto script dentro del primero.</p>
+    </blockquote>
+    <p>Para salir de estos script hay que poner dos veces <strong>exit</strong>.
+Así hasta el final, ya veréis que en poco tiempo tenis <strong>Arch Linux</strong> instalado.</p>
+    <blockquote>
+      <p>No os dará tiempo para tomar :coffee:</p>
+    </blockquote>
+    <p>Cualquier duda podéis mandar un correo: GumerLuX@oulook.com</p>
+  </body>
+</html>

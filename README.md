@@ -1,6 +1,8 @@
 # Manual para instalar Arch Linux
 
-Este script ara más fácil la instalación de **Arch Linux**
+Bienvenidos a este tutorial.
+
+En este script que he creado ara más fácil la instalación de **Arch Linux**
 
 Con él se pueden ver los `comandos` que necesitas para la instalación y vosotros mismos los iréis poniendo.
 
@@ -8,13 +10,13 @@ De esta manera iréis aprendiendo más fácil.
 
 Podéis cambiar los comandos, por otros que vosotros utilicéis.
 
-Al finalizar un `comando` ay que poner **exit** para continuar.
+Al finalizar cada `comando` hay que poner **exit** para continuar con el script.
 
-## Guía de utilización
+### Guía de utilización
 
 Nos descargamos la ISO desde la página oficial https://www.archlinux.org/download/
 
-O directamente desde aquí: http://ftp.rediris.es/mirror/archlinux/iso/2020.11.01/archlinux-2020.11.01-x86_64.iso
+O directamente desde aquí: http://ftp.rediris.es/mirror/archlinux/iso/2020.12.01/archlinux-2020.12.01-x86_64.iso
 
 Cargamos la iso en nuestro PC o M. Virtual, una vez iniciado el sistema nos descargamos el git del repositorio:
 
@@ -40,6 +42,8 @@ Terminado nos bajamos el repositorio de este enlace:
 $ git clone https://github.com/GumerLuX/arch.git
 ```
 
+Para que el proceso de instalación no tenga problemas de espacio, creamos un espacio virtual.
+
 Añadimos mas espacio a la memoria, con este comando:
 
 ```sh
@@ -48,7 +52,7 @@ $ mount -o remount,size=2G /run/archiso/cowspace
 
 ### Lanzamos el script
 
-Terminada la descarga entramos en el directorio y ejecutamos el script.
+Terminada la descarga y añadido el espacio virtual entramos en el directorio y ejecutamos el script.
 
 ```sh
 $ cd arch
@@ -140,4 +144,4 @@ Así hasta el final, ya veréis que en poco tiempo tenis **Arch Linux** instalad
 
 > No os dará tiempo para tomar :coffee:
 
-Cualquier duda podéis mandar un correo: GumerLuX@gmail.com
+Cualquier duda podéis mandar un correo: GumerLuX@oulook.com
