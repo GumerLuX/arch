@@ -159,7 +159,9 @@ echo
 echo -e "\e[36m===================================================\e[0m"
 echo -e "\e[36m===================================================\e[33m"
 echo
-read -p "       Press enter para reiniciar el sistema "
+read -p "       Presiona enter para reiniciar el sistema ó
+       Crtl + C
+       Para continuar en el sistema."
 # BYE
 echo -e "\n\nBBBBBB  YY    YY EEEEEEE"
  echo        "BB  BBB  YY YY   EE     "

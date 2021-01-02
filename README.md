@@ -60,6 +60,12 @@ $ ls			-> nos muestra los archivos
 install.sh disco.sh kernel.sh root.sh usuario.sh README.md ......
 ```
 
+Damos permisos de ejecucion a los scripts
+
+```sh
+$ chmod +x *.sh     -> para ponerlos en todos
+```
+
 Nos encontramos con cinco scripts a utilizar en este orden
 
 > 1º install.sh -> Es un script de instalación **Arch Linux**. Dentro se utilizan el script de configuración del disco e instal·lació del sistema base y **kernel linux**

@@ -116,7 +116,7 @@ echo -e   Para tarjeta grafica INTEL
 echo -e   Escrive:$  "${yellowColour} pacman -S xf86-video-intel intel-ucode ${endColour}"
 echo
 echo -e   Si utilizamos una MV "virtualbox" "\e[1;35m los dos ${endColour}"
-echo -e   Escrive:$  "${yellowColour} pacman -S virtualbox-guest-utils xf86-video-wmware ${endColour}"
+echo -e   Escrive:$  "${yellowColour} pacman -S virtualbox-guest-utils xf86-video-vmware ${endColour}"
 echo
 echo -e "${turquoiseColour}===================================================${endColour}"
 bash
@@ -140,17 +140,17 @@ echo -e "${turquoiseColour}===================================================${
 echo
 echo -e "${greenColour} Copiamos el script de instalacion al directorio de usuario ${endColour}"
 echo
-echo   "Copiamos el script de instalacion, retrocedemos un directorio
+echo   "Copiamos el script de instalacion, retrocedemos un directorio, cambiamos el propietario.
         Pon en mombre de tu usuario:"
 read usuario
 echo
 echo -e   Escrive 1:$  "${yellowColour} cd .. ${endColour}"
-echo -e   Escrive 2:$  "${yellowColour} cp -rp arch /mnt/home/$usuario ${endColour}"
+echo -e   Escrive 2:$  "${yellowColour} chown -R $usuario:user arch ${endColour}"
+echo -e   Escrive 2:$  "${yellowColour} mv arch /home/$usuario ${endColour}"
 echo
 echo -e "${turquoiseColour}===================================================${endColour}"
 bash
 clear
-echo   Copiamos el script de instalacion al directorio de usuario
 # Salimos de script y root
 echo -e "${turquoiseColour}===================================================${endColour}"
 echo
