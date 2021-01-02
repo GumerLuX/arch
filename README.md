@@ -150,4 +150,4 @@ Así hasta el final, ya veréis que en poco tiempo tenis **Arch Linux** instalad
 
 > No os dará tiempo para tomar :coffee:
 
-Cualquier duda podéis mandar un correo: GumerLuX@oulook.com
+Cualquier duda podéis mandar un correo: GumerLuX90@gmail.com
