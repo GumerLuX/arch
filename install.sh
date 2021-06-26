@@ -381,7 +381,7 @@ echo
 echo   Copiamos el script de instalacion, vamos un directorio atras.
 echo
 echo -e   Escrive:$  "${yellowColour} cd .. ${fincolor}"
-echo -e   Escrive:$  "${yellowColour} cp -rp arch /mnt/root / ${fincolor}"
+echo -e   Escrive:$  "${yellowColour} cp -rp arch/ /mnt/root/ ${fincolor}"
 echo
 echo -e "${blueColour}===================================================${fincolor}"
 bash
