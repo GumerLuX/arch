@@ -98,7 +98,7 @@ echo    "
         [multilib]
         include /ete/pacman.d/mirrorlist
         "
-echo -e   Escrive:$  "\e[1;33m nano /etc/pacman.conf \e[0m"
+echo -e   Escrive:$  "\e[1;33m sudo nano /etc/pacman.conf \e[0m"
 echo
 echo -e     Gurdamos y Salimos "Crtl + o y Crtl + x"
 echo -e "\e[36m===================================================\e[0m"
@@ -128,7 +128,7 @@ echo
 echo -e "\e[32m Instalando el entorno grafico, 'escritorio': \e[0m"
 echo    "
         En Linux tenemos muchos entornos graficos:
-        En este escript solo mostrare estos cuatro, 
+        En este escript solo mostrare estos cinco, 
         'xfce gnome Plasma cinnamon bspwm'
         "
 read -p "Press enter para elegir el escritorio"
