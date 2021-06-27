@@ -145,7 +145,7 @@ echo   "Copiamos el script de instalacion, retrocedemos un directorio, cambiamos
 read usuario
 echo
 echo -e   Escrive 1:$  "${yellowColour} cd .. ${endColour}"
-echo -e   Escrive 2:$  "${yellowColour} chown -R $usuario:user arch ${endColour}"
+echo -e   Escrive 2:$  "${yellowColour} chown -R $usuario arch ${endColour}"
 echo -e   Escrive 2:$  "${yellowColour} mv arch /home/$usuario ${endColour}"
 echo
 echo -e "${turquoiseColour}===================================================${endColour}"
