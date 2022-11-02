@@ -114,8 +114,13 @@ echo "Cual es el disco a formatear (ej: sda1)"
 echo
 #cremos la variable $disco1
 read disco1
+echo    Si utilizas BIOS con MBR
 echo
 echo -e   Escrive:$  "${yellowColour} mkfs.ext2 /dev/$disco1 ${fincolor}"
+echo
+echo    Si utilizas UEFI con gpt
+echo
+echo -e   Escrive:$  "${yellowColour} mkfs.vfat -F32 /dev/$disco1 ${fincolor}"
 echo
 echo -e   Si qieren poner el LABEL al disco:$"${yellowColour} mkfs.ext2 -L boot /dev/$disco1 ${fincolor}"
 echo
@@ -181,6 +186,10 @@ echo    Creamos el directorio boot y montamos en /mnt
 echo
 echo -e   Escrive:$  "${yellowColour} mkdir /mnt/boot /mnt ${fincolor}"
 echo -e   Escrive:$  "${yellowColour} mount /dev/$disco1 /mnt/boot ${fincolor}"
+echo
+echo   Si utilizamos UEFI
+echo -e   Escrive:$  "${yellowColour} mkdir -p /mnt/boot/efi /mnt ${fincolor}"
+echo -e   Escrive:$  "${yellowColour} mount /dev/$disco1 /mnt/boot/efi ${fincolor}"
 echo
 echo -e "${blueColour}===================================================${fincolor}"
 bash
@@ -325,8 +334,14 @@ echo
 echo    'En que disco vas a instalar el cargador de arranque (ej: sda)'
 #cremos la variable $disco4
 read disco4
+echo    Para instalar grub en modo BIOS
 echo
 echo -e   Escrive:$  "${yellowColour} arch-chroot /mnt grub-install /dev/$disco4 ${fincolor}"
+echo
+echo   Para instalar grub en modo UEFI
+echo
+echo -e   Escrive:$  "${yellowColour} arch-chroot /mnt grub-install --efi-directory=/boot/efi --bootloader -id="Arch Linux" --target0x86_64-efi ${fincolor}"
+echo
 echo -e   Escrive:$  "${yellowColour} arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg ${fincolor}"
 echo
 echo -e "${blueColour}===================================================${fincolor}"
@@ -393,6 +408,11 @@ echo -e "${greenColour} DESMONTAMOS PARTICIONES Y REINICIAMOS EL SISTEMA ${finco
 echo
 echo   Dosmontar particiones y reinicio de sistema
 echo
+echo -e   Escrive:$  "${yellowColour} umount -R /mnt ${fincolor}"
+echo
+echo    Con UEFI
+echo -e   Escrive:$  "${yellowColour} umount -R /mnt/boot/efi ${fincolor}"
+echo -e   Escrive:$  "${yellowColour} umount -R /mnt/home ${fincolor}"
 echo -e   Escrive:$  "${yellowColour} umount -R /mnt ${fincolor}"
 echo
 echo -e "${blueColour}===================================================${fincolor}"
