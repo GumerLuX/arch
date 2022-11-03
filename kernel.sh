@@ -40,5 +40,9 @@ echo -e "${turquoiseColour}===================================================${
 echo -e   ${turquoiseColour}Ejemplo de instalacion con el kernel zen y utilidades: comandos a instalar${fincolor}
 echo -e "~${yellowColour}pacstrap /mnt base base-devel linux-zen linux-zen-headers linux-firmware grub os-prober ntfs-3g networkmanager gvfs gvfs-afc gvfs-mtp xdg-user-dirs nano dhcpcd --noconfirm ${endColour}"
 echo -e "${turquoiseColour}===================================================${endColour}"
+echo    Si utilizamos EUFI y necesitamos el wifi añadimos:
+echo -e "~${yellowColour}efibootmgr netctl wpa_supplicant dialog ${endColour}"
+bash
+clear
 bash
 clear
